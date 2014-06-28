@@ -632,9 +632,7 @@ Bind this to <next>:
 
 (defadvice delete-indentation (before reverse-delete-indentation activate)
   "Reverse the way `delete-indentation' works."
-  (if (not (ad-get-arg 0))
-      (ad-set-arg 0 1)
-    (ad-set-arg 0 nil)))
+  (ad-set-arg 0 (not (ad-get-arg 0))))
 
 (provide 'functions)
 ;;; functions.el ends here
