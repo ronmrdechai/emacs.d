@@ -1,0 +1,6 @@
+[submodule "vendor/irony-mode"]
+	path = vendor/irony-mode
+	url = git@github.com:Sarcasm/irony-mode.git
+[submodule "vendor/slime"]
+	path = vendor/slime
+	url = git@github.com:slime/slime.git

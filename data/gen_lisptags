@@ -1,0 +1,1 @@
+i=1; for F in $(find $PWD -name "*.el.gz"); do S=${F%.gz}; echo "Adding $F ($i/1366)"; gunzip $F && mv $S $F && ctags --language-force=Lisp -e -a -f STDLISPTAGS $F && mv $F $S && gzip $S; let i++; done

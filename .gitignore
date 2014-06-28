@@ -1,0 +1,7 @@
+*.elc
+.DS_Store
+elpa/*
+cache/*
+vendor/emacs-clang-complete-async/clang-complete
+vendor/irony-mode/build
+vendor/irony-mode/bin

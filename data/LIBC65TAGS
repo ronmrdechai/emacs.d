@@ -1,0 +1,2707 @@
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/6502.h,1176
+#define _6502_H_6502_H37,2534
+#define CPU_6502	CPU_650242,2588
+#define CPU_65C02	CPU_65C0243,2607
+#define CPU_65816	CPU_6581644,2627
+#define	BRK(BRK52,2761
+#define CLI(CLI53,2791
+#define SEI(SEI54,2821
+struct regs {regs59,2913
+    unsigned char a;		/* A register value */a60,2927
+    unsigned char x;		/* X register value */x61,2972
+    unsigned char y;		/* Y register value */y62,3017
+    unsigned char flags;	/* Flags value */flags63,3062
+    unsigned      pc;		/* Program counter */pc64,3105
+#define F_NEG	F_NEG69,3230
+#define F_OVF	F_OVF70,3263
+#define F_BRK	F_BRK71,3296
+#define F_DEC	F_DEC72,3329
+#define F_IEN F_IEN73,3362
+#define F_ZERO	F_ZERO74,3400
+#define F_CARRY	F_CARRY75,3437
+#define F6502_N	F6502_N79,3533
+#define F6502_V	F6502_V80,3568
+#define F6502_B F6502_B81,3603
+#define F6502_D F6502_D82,3639
+#define F6502_I F6502_I83,3675
+#define F6502_Z F6502_Z84,3711
+#define F6502_C F6502_C85,3746
+typedef void (*brk_handler) (void);brk_handler110,4668
+#define IRQ_NOT_HANDLED	IRQ_NOT_HANDLED122,4971
+#define IRQ_HANDLED	IRQ_HANDLED123,4997
+typedef unsigned char (*irq_handler) (void);irq_handler125,5020
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_6522.h,1124
+#define __VIA_H__VIA_H34,2327
+struct __6522 {__652243,2624
+    unsigned char	prb;		/* Port register B */prb44,2640
+    unsigned char	pra;		/* Port register A */pra45,2686
+    unsigned char	ddrb;		/* Data direction register B */ddrb46,2732
+    unsigned char	ddra;		/* Data direction register A */ddra47,2789
+    unsigned char	t1_lo;		/* Timer 1, low byte */t1_lo48,2846
+    unsigned char	t1_hi;		/* Timer 1, high byte */t1_hi49,2896
+    unsigned char	t1l_lo;		/* Timer 1 latch, low byte */t1l_lo50,2947
+    unsigned char	t1l_hi;		/* Timer 1 latch, high byte */t1l_hi51,3004
+    unsigned char	t2_lo;		/* Timer 2, low byte */t2_lo52,3062
+    unsigned char	t2_hi;		/* Timer 2, high byte */t2_hi53,3112
+    unsigned char	sr;		/* Shift register */sr54,3163
+    unsigned char	acr;		/* Auxiliary control register */acr55,3207
+    unsigned char	pcr;		/* Peripheral control register */pcr56,3264
+    unsigned char	ifr;		/* Interrupt flag register */ifr57,3322
+    unsigned char	ier;		/* Interrupt enable register */ier58,3376
+    unsigned char	pra2;		/* Port register A w/o handshake */pra259,3432
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_6525.h,589
+#define __6525_H__6525_H37,2507
+struct __6525 {__652545,2748
+    unsigned char	pra;		/* Port register A */pra46,2764
+    unsigned char	prb;		/* Port register B */prb47,2810
+    unsigned char      	prc;		/* Port register C */prc48,2856
+    unsigned char	ddra;		/* Data direction register A */ddra49,2908
+    unsigned char	ddrb;		/* Data direction register B */ddrb50,2965
+    unsigned char	ddrc;  	       	/* Data direction register C */ddrc51,3022
+    unsigned char	cr;		/* Control register */cr52,3088
+    unsigned char	air;		/* Active interrupt register */air53,3134
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_6526.h,1102
+#define __6526_H__6526_H37,2507
+struct __6526 {__652646,2805
+    unsigned char	pra;		/* Port register A */pra47,2821
+    unsigned char	prb;		/* Port register B */prb48,2867
+    unsigned char	ddra;		/* Data direction register A */ddra49,2913
+    unsigned char	ddrb;		/* Data direction register B */ddrb50,2970
+    unsigned char	ta_lo;		/* Timer A, low byte */ta_lo51,3027
+    unsigned char	ta_hi;		/* Timer A, high byte */ta_hi52,3077
+    unsigned char      	tb_lo; 	       	/* Timer B, low byte */tb_lo53,3128
+    unsigned char	tb_hi;		/* Timer B, high byte */tb_hi54,3192
+    unsigned char      	tod_10;		/* TOD, 1/10 sec. */tod_1055,3243
+    unsigned char	tod_sec;	/* TOD, seconds */tod_sec56,3297
+    unsigned char	tod_min;	/* TOD, minutes */tod_min57,3343
+    unsigned char	tod_hour;	/* TOD, hours */tod_hour58,3389
+    unsigned char	sdr;		/* Serial data register */sdr59,3434
+    unsigned char	icr;		/* Interrupt control register */icr60,3485
+    unsigned char	cra;		/* Control register A */cra61,3542
+    unsigned char	crb;		/* Control register B */crb62,3591
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_6545.h,196
+#define __6545_H__6545_H37,2507
+struct __6545 {__654542,2583
+    unsigned char      	ctrl;	   	/* Control register */ctrl43,2599
+    unsigned char	data;	   	/* Data register */data44,2656
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_6551.h,351
+#define __6551_H__6551_H37,2507
+struct __6551 {__655142,2583
+    unsigned char      	data;  	       	/* Data register */data43,2599
+    unsigned char      	status;	       	/* Status register */status44,2659
+    unsigned char      	cmd;   	       	/* Command register */cmd45,2721
+    unsigned char	ctrl;		/* Control register */ctrl46,2784
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_antic.h,1232
+#define __ANTIC_H__ANTIC_H33,2275
+struct __antic {__antic36,2351
+    unsigned char   dmactl; /* direct memory access control */dmactl37,2368
+    unsigned char   chactl; /* character mode control */chactl38,2431
+    unsigned char   dlistl; /* display list pointer low-byte */dlistl39,2488
+    unsigned char   dlisth; /* display list pointer high-byte */dlisth40,2552
+    unsigned char   hscrol; /* horizontal scroll enable */hscrol41,2617
+    unsigned char   vscrol; /* vertical scroll enable */vscrol42,2676
+    unsigned char   unuse0; /* unused */unuse043,2733
+    unsigned char   pmbase; /* msb of p/m base address */pmbase44,2774
+    unsigned char   unuse1; /* unused */unuse145,2832
+    unsigned char   chbase; /* character base address */chbase46,2873
+    unsigned char   wsync;  /* wait for horizontal synchronization */wsync47,2930
+    unsigned char   vcount; /* vertical line counter */vcount48,3000
+    unsigned char   penh;   /* light pen horizontal position */penh49,3056
+    unsigned char   penv;   /* light pen vertical position */penv50,3120
+    unsigned char   nmien;  /* non-maskable interrupt enable */nmien51,3182
+    unsigned char   nmires; /* nmi reset/status */nmires52,3246
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_gtia.h,3998
+#define __GTIA_H__GTIA_H33,2274
+struct __gtia_write {__gtia_write36,2348
+    unsigned char   hposp0; /* horizontal position player 0 */hposp037,2370
+    unsigned char   hposp1; /* horizontal position player 1 */hposp138,2433
+    unsigned char   hposp2; /* horizontal position player 2 */hposp239,2496
+    unsigned char   hposp3; /* horizontal position player 3 */hposp340,2559
+    unsigned char   hposm0; /* horizontal position missile 0 */hposm041,2622
+    unsigned char   hposm1; /* horizontal position missile 1 */hposm142,2686
+    unsigned char   hposm2; /* horizontal position missile 2 */hposm243,2750
+    unsigned char   hposm3; /* horizontal position missile 3 */hposm344,2814
+    unsigned char   sizep0; /* size of player 0 */sizep045,2878
+    unsigned char   sizep1; /* size of player 1 */sizep146,2929
+    unsigned char   sizep2; /* size of player 2 */sizep247,2980
+    unsigned char   sizep3; /* size of player 3 */sizep348,3031
+    unsigned char   sizem;  /* size of missiles */sizem49,3082
+    unsigned char   grafp0; /* graphics shape player 0 */grafp050,3133
+    unsigned char   grafp1; /* graphics shape player 1 */grafp151,3191
+    unsigned char   grafp2; /* graphics shape player 2 */grafp252,3249
+    unsigned char   grafp3; /* graphics shape player 3 */grafp353,3307
+    unsigned char   grafm;  /* graphics shape missiles */grafm54,3365
+    unsigned char   colpm0; /* color player and missile 0 */colpm055,3423
+    unsigned char   colpm1; /* color player and missile 1 */colpm156,3484
+    unsigned char   colpm2; /* color player and missile 2 */colpm257,3545
+    unsigned char   colpm3; /* color player and missile 3 */colpm358,3606
+    unsigned char   colpf0; /* color playfield 0 */colpf059,3667
+    unsigned char   colpf1; /* color playfield 1 */colpf160,3719
+    unsigned char   colpf2; /* color playfield 2 */colpf261,3771
+    unsigned char   colpf3; /* color playfield 3 */colpf362,3823
+    unsigned char   colbk;  /* color background */colbk63,3875
+    unsigned char   prior;  /* priority selection */prior64,3926
+    unsigned char   vdelay; /* vertical delay */vdelay65,3979
+    unsigned char   gractl; /* stick/paddle latch, p/m control */gractl66,4028
+    unsigned char   hitclr; /* clear p/m collision */hitclr67,4094
+    unsigned char   consol; /* console buttons */consol68,4148
+struct __gtia_read {__gtia_read72,4258
+    unsigned char   m0pf;   /* missile 0 to playfield collision */m0pf73,4279
+    unsigned char   m1pf;   /* missile 1 to playfield collision */m1pf74,4346
+    unsigned char   m2pf;   /* missile 2 to playfield collision */m2pf75,4413
+    unsigned char   m3pf;   /* missile 3 to playfield collision */m3pf76,4480
+    unsigned char   p0pf;   /* player 0 to playfield collision */p0pf77,4547
+    unsigned char   p1pf;   /* player 1 to playfield collision */p1pf78,4613
+    unsigned char   p2pf;   /* player 2 to playfield collision */p2pf79,4679
+    unsigned char   p3pf;   /* player 3 to playfield collision */p3pf80,4745
+    unsigned char   m0pl;   /* missile 0 to player collision */m0pl81,4811
+    unsigned char   m1pl;   /* missile 1 to player collision */m1pl82,4875
+    unsigned char   m2pl;   /* missile 2 to player collision */m2pl83,4939
+    unsigned char   m3pl;   /* missile 3 to player collision */m3pl84,5003
+    unsigned char   p0pl;   /* player 0 to player collision */p0pl85,5067
+    unsigned char   p1pl;   /* player 1 to player collision */p1pl86,5130
+    unsigned char   p2pl;   /* player 2 to player collision */p2pl87,5193
+    unsigned char   p3pl;   /* player 3 to player collision */p3pl88,5256
+    unsigned char   trig0;  /* joystick trigger 0 */trig089,5319
+    unsigned char   trig1;  /* joystick trigger 1 */trig190,5372
+    unsigned char   trig2;  /* joystick trigger 2 */trig291,5425
+    unsigned char   trig3;  /* joystick trigger 3 */trig392,5478
+    unsigned char   pal;    /* pal/ntsc flag */pal93,5531
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_heap.h,357
+#define __HEAP_H__HEAP_H11,93
+struct usedblock {usedblock20,331
+    unsigned            size;size21,350
+    struct usedblock*   start;start22,380
+#define HEAP_ADMIN_SPACE HEAP_ADMIN_SPACE26,464
+struct freeblock {freeblock31,670
+    unsigned 		size;size32,689
+    struct freeblock*  	next;next33,710
+    struct freeblock*  	prev;prev34,740
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_pbi.h,287
+#define __PBI_H__PBI_H32,2272
+#define PBI	PBI35,2323
+#define PDVI	PDVI38,2395
+#define PDVS	PDVS41,2464
+#define PBIRAM	PBIRAM44,2542
+#define PDID1	PDID147,2611
+#define PDIDV	PDIDV50,2685
+#define PDIRQV	PDIRQV53,2759
+#define PDID2	PDID256,2828
+#define PDVV	PDVV59,2904
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_pia.h,315
+#define __PIA_H__PIA_H34,2282
+struct __pia {__pia38,2355
+    unsigned char   porta;  /* port A data r/w */porta39,2370
+    unsigned char   portb;  /* port B data r/w */portb40,2420
+    unsigned char   pactl;  /* port A control */pactl41,2470
+    unsigned char   pbctl;  /* port B control */pbctl42,2519
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_pokey.h,2296
+#define __POKEY_H__POKEY_H34,2285
+struct __pokey_write {__pokey_write39,2363
+    unsigned char   audf1;  /* audio channel #1 frequency */audf140,2386
+    unsigned char   audc1;  /* audio channel #1 control */audc141,2447
+    unsigned char   audf2;  /* audio channel #2 frequency */audf242,2506
+    unsigned char   audc2;  /* audio channel #2 control */audc243,2567
+    unsigned char   audf3;  /* audio channel #3 frequency */audf344,2626
+    unsigned char   audc3;  /* audio channel #3 control */audc345,2687
+    unsigned char   audf4;  /* audio channel #4 frequency */audf446,2746
+    unsigned char   audc4;  /* audio channel #4 control */audc447,2807
+    unsigned char   audctl; /* audio control */audctl48,2866
+    unsigned char   stimer; /* start pokey timers */stimer49,2914
+    unsigned char   skrest; /* reset serial port status reg. */skrest50,2967
+    unsigned char   potgo;  /* start paddle scan sequence */potgo51,3031
+    unsigned char   unuse1; /* unused */unuse152,3092
+    unsigned char   serout; /* serial port data output */serout53,3133
+    unsigned char   irqen;  /* interrupt request enable */irqen54,3191
+    unsigned char   skctl;  /* serial port control */skctl55,3250
+struct __pokey_read {__pokey_read57,3307
+    unsigned char   pot0;   /* paddle 0 value */pot058,3329
+    unsigned char   pot1;   /* paddle 1 value */pot159,3378
+    unsigned char   pot2;   /* paddle 2 value */pot260,3427
+    unsigned char   pot3;   /* paddle 3 value */pot361,3476
+    unsigned char   pot4;   /* paddle 4 value */pot462,3525
+    unsigned char   pot5;   /* paddle 5 value */pot563,3574
+    unsigned char   pot6;   /* paddle 6 value */pot664,3623
+    unsigned char   pot7;   /* paddle 7 value */pot765,3672
+    unsigned char   allpot; /* eight paddle port status */allpot66,3721
+    unsigned char   kbcode; /* keyboard code */kbcode67,3780
+    unsigned char   random; /* random number generator */random68,3828
+    unsigned char   unuse2; /* unused */unuse269,3886
+    unsigned char   unuse3; /* unused */unuse370,3927
+    unsigned char   serin;  /* serial port input */serin71,3968
+    unsigned char   irqst;  /* interrupt request status */irqst72,4020
+    unsigned char   skstat; /* serial port status */skstat73,4079
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_sid.h,994
+#define __SID_H__SID_H37,2505
+struct __sid_voice {__sid_voice42,2579
+    unsigned   	       	freq;		/* Frequency */freq43,2600
+    unsigned 		pw;		/* Pulse width */pw44,2647
+    unsigned char	ctrl;		/* Control register */ctrl45,2685
+    unsigned char	ad;		/* Attack/decay */ad46,2733
+    unsigned char	sr;		/* Sustain/release */sr47,2775
+struct __sid {__sid49,2823
+    struct __sid_voice	v1;     	/* Voice 1 */v150,2838
+    struct __sid_voice 	v2;     	/* Voice 2 */v251,2884
+    struct __sid_voice	v3;     	/* Voice 3 */v352,2931
+    unsigned		flt_freq;   	/* Filter frequency */flt_freq53,2977
+    unsigned char	flt_ctrl;	/* Filter control register */flt_ctrl54,3027
+    unsigned char	amp;		/* Amplitude */amp55,3085
+    unsigned char	ad1;		/* A/D converter 1 */ad156,3125
+    unsigned char      	ad2;		/* A/D converter 2 */ad257,3171
+    unsigned char	noise;		/* Noise generator */noise58,3223
+    unsigned char	read3;		/* Value of voice 3 */read359,3271
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_ted.h,2987
+#define __TED_H__TED_H37,2505
+struct __ted {__ted42,2579
+    unsigned char       t1_lo;          /* Timer #1 low */t1_lo43,2594
+    unsigned char       t1_hi;          /* Timer #1 high */t1_hi44,2653
+    unsigned char       t2_lo;          /* Timer #2 low */t2_lo45,2713
+    unsigned char       t2_hi;          /* Timer #2 high */t2_hi46,2772
+    unsigned char       t3_lo;          /* Timer #3 low */t3_lo47,2832
+    unsigned char       t3_hi;          /* Timer #3 high */t3_hi48,2891
+    unsigned char       vscroll;        /* Vertical scroll control */vscroll49,2951
+    unsigned char       hscroll;        /* Horizontal scroll control */hscroll50,3021
+    unsigned char       kbdlatch;       /* Keyboard latch */kbdlatch51,3093
+    unsigned char       irr;            /* Interrupt request register */irr52,3154
+    unsigned char       imr;            /* Interrupt mask register */imr53,3227
+    unsigned char       irq_rasterline; /* Interrupt rasterline */irq_rasterline54,3297
+    unsigned char       cursor_hi;      /* Cursor position high */cursor_hi55,3364
+    unsigned char       cursor_lo;      /* Cursor position low */cursor_lo56,3431
+    unsigned char       snd1_freq_lo;   /* Channel #1 frequency */snd1_freq_lo57,3497
+    unsigned char       snd2_freq_lo;   /* Channel #2 frequency low */snd2_freq_lo58,3564
+    unsigned char       snd2_freq_hi;   /* Channel #2 frequency high */snd2_freq_hi59,3635
+    unsigned char       snd_ctrl;       /* Sound control */snd_ctrl60,3707
+    unsigned char       misc;           /* Channel #1 frequency high and more */misc61,3767
+    unsigned char       char_addr;      /* Character data base address */char_addr62,3848
+    unsigned char       video_addr;     /* Video memory base address */video_addr63,3922
+    unsigned char       bgcolor;        /* Background color */bgcolor64,3994
+    unsigned char       color1;         /* Color register #1 */color165,4057
+    unsigned char       color2;         /* Color register #2 */color266,4121
+    unsigned char       color3;         /* Color register #3 */color367,4185
+    unsigned char       bordercolor;    /* Border color */bordercolor68,4249
+    unsigned char       bmap_reload_hi; /* Bitmap reload bits 8+9 */bmap_reload_hi69,4308
+    unsigned char       bmap_reload_lo; /* Bitmap reload bits 0-7 */bmap_reload_lo70,4377
+    unsigned char       rasterline_hi;  /* Current rasterline bit 8 */rasterline_hi71,4446
+    unsigned char       rasterline_lo;  /* Current rasterline bits 0-7 */rasterline_lo72,4517
+    unsigned char       rastercolumn;   /* Current rastercolumn */rastercolumn73,4591
+    unsigned char       cursor_blink;   /* Cursor blink attribute */cursor_blink74,4658
+    unsigned char       unused[30];     /* Unused */unused75,4727
+    unsigned char       enable_rom;     /* Write enables ROM */enable_rom76,4780
+    unsigned char       enable_ram;     /* Write enables RAM */enable_ram77,4844
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_vdc.h,188
+#define __VDC_H__VDC_H37,2505
+struct __vdc {__vdc42,2579
+    unsigned char      	ctrl;		/* Control register */ctrl43,2594
+    unsigned char	data;	  	/* Data register */data44,2648
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_vic.h,1283
+#define __VIC_H__VIC_H37,2517
+struct __vic {__vic42,2591
+    unsigned char      	leftborder;leftborder43,2606
+    unsigned char	upperborder;upperborder44,2642
+    unsigned char      	charsperline;   /* Characters per line */charsperline45,2673
+    unsigned char	linecount;      /* Number of lines */linecount46,2739
+    unsigned char	rasterline;     /* Current raster line */rasterline47,2795
+    unsigned char	addr;           /* Address of chargen and video ram */addr48,2855
+    unsigned char	strobe_x;	/* Light pen, X position */strobe_x49,2928
+    unsigned char	strobe_y;	/* Light pen, Y position */strobe_y50,2984
+    unsigned char      	analog_x;       /* Analog input X */analog_x51,3040
+    unsigned char	analog_y;       /* Analog input Y */analog_y52,3101
+    unsigned char	voice1;         /* Sound generator #1 */voice153,3156
+    unsigned char      	voice2;         /* Sound generator #2 */voice254,3215
+    unsigned char	voice3;         /* Sound generator #3 */voice355,3280
+    unsigned char	noise;          /* Noise generator */noise56,3339
+    unsigned char      	volume_color;   /* Bits 0..3: volume, 4..7: color */volume_color57,3395
+    unsigned char       bg_border_color;/* Background and border color */bg_border_color58,3472
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/_vic2.h,3652
+#define __VIC2_H__VIC2_H37,2507
+struct __vic2 {__vic242,2582
+    unsigned char	spr0_x;		/* Sprite 0, X coordinate */spr0_x43,2598
+    unsigned char	spr0_y;		/* Sprite 0, Y coordinate */spr0_y44,2654
+    unsigned char      	spr1_x;		/* Sprite 1, X coordinate */spr1_x45,2710
+    unsigned char	spr1_y;		/* Sprite 1, Y coordinate */spr1_y46,2772
+    unsigned char	spr2_x;		/* Sprite 2, X coordinate */spr2_x47,2828
+    unsigned char	spr2_y;		/* Sprite 2, Y coordinate */spr2_y48,2884
+    unsigned char	spr3_x;		/* Sprite 3, X coordinate */spr3_x49,2940
+    unsigned char	spr3_y;		/* Sprite 3, Y coordinate */spr3_y50,2996
+    unsigned char	spr4_x;		/* Sprite 4, X coordinate */spr4_x51,3052
+    unsigned char	spr4_y;		/* Sprite 4, Y coordinate */spr4_y52,3108
+    unsigned char	spr5_x;		/* Sprite 5, X coordinate */spr5_x53,3164
+    unsigned char	spr5_y;		/* Sprite 5, Y coordinate */spr5_y54,3220
+    unsigned char	spr6_x;		/* Sprite 6, X coordinate */spr6_x55,3276
+    unsigned char	spr6_y;		/* Sprite 6, Y coordinate */spr6_y56,3332
+    unsigned char	spr7_x;		/* Sprite 7, X coordinate */spr7_x57,3388
+    unsigned char	spr7_y;		/* Sprite 7, Y coordinate */spr7_y58,3444
+    unsigned char	spr_hi_x;	/* High bits of X coordinate */spr_hi_x59,3500
+    unsigned char	ctrl1;		/* Control register 1 */ctrl160,3560
+    unsigned char	rasterline;	/* Current raster line */rasterline61,3611
+    unsigned char	strobe_x;	/* Light pen, X position */strobe_x62,3667
+    unsigned char	strobe_y;	/* Light pen, Y position */strobe_y63,3723
+    unsigned char	spr_ena;	/* Enable sprites */spr_ena64,3779
+    unsigned char	ctrl2;		/* Control register 2 */ctrl265,3827
+    unsigned char	spr_exp_y;	/* Expand sprites in Y dir */spr_exp_y66,3878
+    unsigned char      	addr;  		/* Address of chargen and video ram */addr67,3937
+    unsigned char	irr;		/* Interrupt request register */irr68,4009
+    unsigned char	imr;		/* Interrupt mask register */imr69,4066
+    unsigned char	spr_bg_prio;	/* Priority to background */spr_bg_prio70,4120
+    unsigned char	spr_mcolor;	/* Sprite multicolor bits */spr_mcolor71,4180
+    unsigned char	spr_exp_x;     	/* Expand sprites in X dir */spr_exp_x72,4239
+    unsigned char	spr_coll;	/* Sprite/sprite collision reg */spr_coll73,4303
+    unsigned char	spr_bg_coll;	/* Sprite/background collision reg */spr_bg_coll74,4365
+    unsigned char      	bordercolor;	/* Border color */bordercolor75,4434
+    unsigned char	bgcolor0;	/* Background color 0 */bgcolor076,4490
+    unsigned char	bgcolor1;	/* Background color 1 */bgcolor177,4543
+    unsigned char	bgcolor2;	/* Background color 2 */bgcolor278,4596
+    unsigned char	bgcolor3;      	/* Background color 3 */bgcolor379,4649
+    unsigned char	spr_mcolor0;	/* Color 0 for multicolor sprites */spr_mcolor080,4708
+    unsigned char      	spr_mcolor1;   	/* Color 1 for multicolor sprites */spr_mcolor181,4776
+    unsigned char	spr0_color;	/* Color sprite 0 */spr0_color82,4853
+    unsigned char      	spr1_color;	/* Color sprite 1 */spr1_color83,4904
+    unsigned char	spr2_color;	/* Color sprite 2 */spr2_color84,4961
+    unsigned char	spr3_color;	/* Color sprite 3 */spr3_color85,5012
+    unsigned char	spr4_color;	/* Color sprite 4 */spr4_color86,5063
+    unsigned char	spr5_color;	/* Color sprite 5 */spr5_color87,5114
+    unsigned char	spr6_color;	/* Color sprite 6 */spr6_color88,5165
+    unsigned char	spr7_color;	/* Color sprite 7 */spr7_color89,5216
+    unsigned char	x_kbd;		/* Additional keyboard lines */x_kbd92,5325
+    unsigned char	clock;		/* Clock switch bit */clock93,5383
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/ace.h,1479
+#define _ACE_H_ACE_H37,2493
+struct aceDirentBuf {aceDirentBuf54,2683
+    unsigned long   ad_size;   		/* Size in bytes */ad_size55,2705
+    unsigned char   ad_date [8];   	/* YY:YY:MM:DD:HH:MM:SS:TW */ad_date56,2758
+    char            ad_type [4];	/* File type as ASCIIZ string */ad_type57,2824
+    unsigned char   ad_flags;	        /* File flags */ad_flags58,2890
+    unsigned char   ad_usage;           /* More flags */ad_usage59,2945
+    unsigned char   ad_namelen;         /* Length of name */ad_namelen60,3002
+    char            ad_name [17];       /* Name itself, ASCIIZ */ad_name61,3063
+typedef unsigned int aceKey;aceKey69,3314
+#define aceSH_KEY	aceSH_KEY72,3403
+#define aceSH_MASK	aceSH_MASK73,3451
+#define aceSH_EXT	aceSH_EXT74,3500
+#define aceSH_CAPS aceSH_CAPS75,3545
+#define aceSH_ALT aceSH_ALT76,3593
+#define aceSH_CTRL	aceSH_CTRL77,3641
+#define aceSH_CBM	aceSH_CBM78,3683
+#define aceSH_SHIFT	aceSH_SHIFT79,3729
+#define aceOP_PUTMASK	aceOP_PUTMASK82,3834
+#define	aceOP_CHARCOLOR	aceOP_CHARCOLOR83,3882
+#define aceOP_CHARATTR	aceOP_CHARATTR84,3931
+#define aceOP_FILLCOLOR	aceOP_FILLCOLOR85,3983
+#define aceOP_FILLATTR	aceOP_FILLATTR86,4027
+#define aceOP_CRSCOLOR	aceOP_CRSCOLOR87,4074
+#define aceOP_CRSWRAP	aceOP_CRSWRAP88,4119
+#define aceOP_SHSCROLL	aceOP_SHSCROLL89,4168
+#define aceOP_MOUSCALE	aceOP_MOUSCALE90,4225
+#define aceOP_RPTDELAY	aceOP_RPTDELAY91,4271
+#define aceOP_RPTRATE	aceOP_RPTRATE92,4321
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/apple2.h,2275
+#define _APPLE2_H_APPLE2_H35,2383
+#define COLOR_BLACK COLOR_BLACK53,2796
+#define COLOR_GREEN COLOR_GREEN54,2825
+#define COLOR_VIOLET COLOR_VIOLET55,2854
+#define COLOR_WHITE COLOR_WHITE56,2883
+#define COLOR_BLACK2 COLOR_BLACK257,2912
+#define COLOR_ORANGE COLOR_ORANGE58,2941
+#define COLOR_BLUE COLOR_BLUE59,2970
+#define COLOR_WHITE2 COLOR_WHITE260,2999
+#define LORES_BLACK LORES_BLACK62,3029
+#define LORES_MAGENTA LORES_MAGENTA63,3058
+#define LORES_DARKBLUE LORES_DARKBLUE64,3087
+#define LORES_VIOLET LORES_VIOLET65,3116
+#define LORES_DARKGREEN LORES_DARKGREEN66,3145
+#define LORES_GRAY LORES_GRAY67,3174
+#define LORES_BLUE LORES_BLUE68,3203
+#define LORES_CYAN LORES_CYAN69,3232
+#define LORES_BROWN LORES_BROWN70,3261
+#define LORES_ORANGE LORES_ORANGE71,3290
+#define LORES_GRAY2 LORES_GRAY272,3319
+#define LORES_PINK LORES_PINK73,3348
+#define LORES_GREEN LORES_GREEN74,3377
+#define LORES_YELLOW LORES_YELLOW75,3406
+#define LORES_AQUA LORES_AQUA76,3435
+#define LORES_WHITE LORES_WHITE77,3464
+#define CH_ENTER CH_ENTER80,3517
+#define CH_ESC CH_ESC81,3546
+#define CH_CURS_LEFT CH_CURS_LEFT82,3575
+#define CH_CURS_RIGHT CH_CURS_RIGHT83,3604
+#define CH_ULCORNER CH_ULCORNER85,3634
+#define CH_URCORNER CH_URCORNER86,3662
+#define CH_LLCORNER CH_LLCORNER87,3690
+#define CH_LRCORNER CH_LRCORNER88,3718
+#define CH_TTEE CH_TTEE89,3746
+#define CH_BTEE CH_BTEE90,3774
+#define CH_LTEE CH_LTEE91,3802
+#define CH_RTEE CH_RTEE92,3830
+#define CH_CROSS CH_CROSS93,3858
+#define APPLE_UNKNOWN APPLE_UNKNOWN96,3921
+#define APPLE_II APPLE_II97,3948
+#define APPLE_IIPLUS APPLE_IIPLUS98,4005
+#define APPLE_IIIEM APPLE_IIIEM99,4063
+#define APPLE_IIE APPLE_IIE100,4131
+#define APPLE_IIEENH APPLE_IIEENH101,4189
+#define APPLE_IIECARD APPLE_IIECARD102,4257
+#define APPLE_IIC APPLE_IIC103,4325
+#define APPLE_IIC35 APPLE_IIC35104,4383
+#define APPLE_IICEXP APPLE_IICEXP105,4450
+#define APPLE_IICREV APPLE_IICREV106,4518
+#define APPLE_IICPLUS APPLE_IICPLUS107,4591
+#define APPLE_IIGS APPLE_IIGS108,4653
+#define APPLE_IIGS1 APPLE_IIGS1109,4700
+#define APPLE_IIGS3 APPLE_IIGS3110,4754
+#define _textcolor(_textcolor150,5831
+#define _bgcolor(_bgcolor151,5875
+#define _bordercolor(_bordercolor152,5919
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/apple2enh.h,737
+#define _APPLE2ENH_H_APPLE2ENH_H34,1526
+#define CH_DEL	CH_DEL59,2025
+#define CH_CURS_UP CH_CURS_UP60,2050
+#define CH_CURS_DOWN	CH_CURS_DOWN61,2076
+#define CH_F1	CH_F164,2155
+#define CH_F2	CH_F265,2179
+#define CH_F3	CH_F366,2203
+#define CH_F4	CH_F467,2227
+#define CH_F5	CH_F568,2251
+#define CH_F6	CH_F669,2275
+#define CH_F7	CH_F770,2299
+#define CH_F8	CH_F871,2323
+#define CH_F9	CH_F972,2347
+#define CH_F10	CH_F1073,2371
+#define TEXTFRAME_WIDE	TEXTFRAME_WIDE76,2424
+#define TEXTFRAME_TALL	TEXTFRAME_TALL77,2452
+#define VIDEOMODE_40x24 VIDEOMODE_40x2480,2499
+#define VIDEOMODE_80x24 VIDEOMODE_80x2481,2530
+#define VIDEOMODE_40COL VIDEOMODE_40COL82,2561
+#define VIDEOMODE_80COL VIDEOMODE_80COL83,2601
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/assert.h,131
+#define _ASSERT_H_ASSERT_H37,2481
+#undef assertassert41,2502
+#  define assert(assert43,2530
+#  define assert(assert46,2605
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/atari.h,5914
+#define _ATARI_H_ATARI_H36,2430
+#define CH_DELCHR	CH_DELCHR48,2597
+#define CH_ESC CH_ESC49,2657
+#define CH_CURS_UP CH_CURS_UP50,2683
+#define CH_CURS_DOWN CH_CURS_DOWN51,2707
+#define CH_CURS_LEFT CH_CURS_LEFT52,2732
+#define CH_CURS_RIGHT CH_CURS_RIGHT53,2759
+#define CH_TAB CH_TAB55,2787
+#define CH_EOL CH_EOL56,2834
+#define CH_CLR CH_CLR57,2890
+#define CH_BEL CH_BEL58,2940
+#define CH_DEL CH_DEL59,2982
+#define CH_RUBOUT CH_RUBOUT60,3056
+#define CH_DELLINE CH_DELLINE61,3122
+#define CH_INSLINE CH_INSLINE62,3171
+#define CH_F1 CH_F165,3269
+#define CH_F2 CH_F266,3293
+#define CH_F3 CH_F367,3317
+#define CH_F4 CH_F468,3341
+#define CH_F5 CH_F569,3365
+#define CH_F6 CH_F670,3389
+#define CH_F7 CH_F771,3413
+#define CH_F8 CH_F872,3437
+#define CH_F9 CH_F973,3461
+#define CH_F10 CH_F1074,3485
+#define CH_ULCORNER CH_ULCORNER76,3511
+#define CH_URCORNER CH_URCORNER77,3537
+#define CH_LLCORNER CH_LLCORNER78,3563
+#define CH_LRCORNER CH_LRCORNER79,3589
+#define CH_TTEE CH_TTEE80,3615
+#define CH_BTEE CH_BTEE81,3641
+#define CH_LTEE CH_LTEE82,3667
+#define CH_RTEE CH_RTEE83,3693
+#define CH_CROSS CH_CROSS84,3719
+#define CH_HLINE CH_HLINE85,3745
+#define CH_VLINE CH_VLINE86,3774
+#define _gtia_mkcolor(_gtia_mkcolor91,3853
+#define HUE_GREY HUE_GREY96,3987
+#define HUE_GOLD HUE_GOLD97,4013
+#define HUE_GOLDORANGE HUE_GOLDORANGE98,4039
+#define HUE_REDORANGE HUE_REDORANGE99,4065
+#define HUE_ORANGE HUE_ORANGE100,4091
+#define HUE_MAGENTA HUE_MAGENTA101,4117
+#define HUE_PURPLE HUE_PURPLE102,4143
+#define HUE_BLUE HUE_BLUE103,4169
+#define HUE_BLUE2 HUE_BLUE2104,4195
+#define HUE_CYAN HUE_CYAN105,4221
+#define HUE_BLUEGREEN HUE_BLUEGREEN106,4247
+#define HUE_BLUEGREEN2 HUE_BLUEGREEN2107,4274
+#define HUE_GREEN HUE_GREEN108,4301
+#define HUE_YELLOWGREEN HUE_YELLOWGREEN109,4328
+#define HUE_YELLOW HUE_YELLOW110,4355
+#define HUE_YELLOWRED HUE_YELLOWRED111,4382
+#define COLOR_BLACK COLOR_BLACK116,4644
+#define COLOR_WHITE COLOR_WHITE117,4700
+#define COLOR_RED COLOR_RED118,4756
+#define COLOR_CYAN COLOR_CYAN119,4817
+#define COLOR_VIOLET COLOR_VIOLET120,4868
+#define COLOR_GREEN COLOR_GREEN121,4926
+#define COLOR_BLUE COLOR_BLUE122,4983
+#define COLOR_YELLOW COLOR_YELLOW123,5039
+#define COLOR_ORANGE COLOR_ORANGE124,5097
+#define COLOR_BROWN COLOR_BROWN125,5155
+#define COLOR_LIGHTRED COLOR_LIGHTRED126,5213
+#define COLOR_GRAY1 COLOR_GRAY1127,5274
+#define COLOR_GRAY2 COLOR_GRAY2128,5330
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN129,5386
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE130,5443
+#define COLOR_GRAY3 COLOR_GRAY3131,5499
+#define setcolor setcolor156,6705
+#define setcolor_low setcolor_low157,6736
+#define getcolor getcolor158,6771
+#define graphics graphics159,6802
+#define scroll scroll160,6833
+#define save_vecs save_vecs161,6862
+#define rest_vecs rest_vecs162,6894
+#define getdefdev getdefdev163,6926
+#define AT_OS_TYPE_MAIN AT_OS_TYPE_MAIN168,7084
+#define AT_OS_TYPE_MINOR AT_OS_TYPE_MINOR169,7111
+#define AT_OS_UNKNOWN AT_OS_UNKNOWN171,7174
+#define AT_OS_400800 AT_OS_400800172,7199
+#define AT_OS_1200XL AT_OS_1200XL173,7224
+#define AT_OS_XLXE AT_OS_XLXE174,7249
+#define AT_OS_400800PAL_A AT_OS_400800PAL_A178,7416
+#define AT_OS_400800PAL_B AT_OS_400800PAL_B179,7445
+#define AT_OS_400800NTSC_A AT_OS_400800NTSC_A180,7474
+#define AT_OS_400800NTSC_B AT_OS_400800NTSC_B181,7503
+#define AT_OS_1200_10 AT_OS_1200_10182,7532
+#define AT_OS_1200_11 AT_OS_1200_11183,7557
+#define AT_OS_XLXE_1 AT_OS_XLXE_1184,7582
+#define AT_OS_XLXE_2 AT_OS_XLXE_2185,7607
+#define AT_OS_XLXE_3 AT_OS_XLXE_3186,7632
+#define AT_OS_XLXE_4 AT_OS_XLXE_4187,7657
+#define AT_NTSC AT_NTSC190,7710
+#define AT_PAL AT_PAL191,7732
+#define ATARIDOS ATARIDOS194,7784
+#define SPARTADOS SPARTADOS195,7806
+#define OSADOS OSADOS196,7828
+#define MYDOS MYDOS197,7850
+#define NODOS NODOS198,7872
+#define GTIA_READ GTIA_READ202,7938
+#define GTIA_WRITE GTIA_WRITE203,7988
+#define POKEY_READ POKEY_READ208,8079
+#define POKEY_WRITE POKEY_WRITE209,8131
+#define PIA PIA212,8203
+#define ANTIC ANTIC215,8261
+struct __dcb {__dcb218,8330
+    unsigned char device;     /* device id */device219,8345
+    unsigned char unit;       /* unit number */unit220,8391
+    unsigned char command;    /* command */command221,8439
+    unsigned char status;     /* command type / status return */status222,8483
+    void          *buffer;    /* pointer to buffer */buffer223,8548
+    unsigned char timeout;    /* device timeout in seconds */timeout224,8602
+    unsigned char unused;unused225,8664
+    unsigned int  xfersize;   /* # of bytes to transfer */xfersize226,8690
+    unsigned char aux1;       /* 1st command auxiliary byte */aux1227,8749
+    unsigned char aux2;       /* 2nd command auxiliary byte */aux2228,8812
+#define DCB DCB230,8878
+struct __iocb {__iocb233,8940
+    unsigned char handler;    /* handler index number (0xff free) */handler234,8956
+    unsigned char drive;      /* device number (drive) */drive235,9025
+    unsigned char command;    /* command */command236,9083
+    unsigned char status;     /* status of last operation */status237,9127
+    void          *buffer;    /* pointer to buffer */buffer238,9188
+    void          *put_byte;  /* pointer to device's PUT BYTE routine */put_byte239,9242
+    unsigned int  buflen;     /* length of buffer */buflen240,9315
+    unsigned char aux1;       /* 1st auxiliary byte */aux1241,9368
+    unsigned char aux2;       /* 2nd auxiliary byte */aux2242,9423
+    unsigned char aux3;       /* 3rd auxiliary byte */aux3243,9478
+    unsigned char aux4;       /* 4th auxiliary byte */aux4244,9533
+    unsigned char aux5;       /* 5th auxiliary byte */aux5245,9588
+    unsigned char spare;      /* spare byte */spare246,9643
+#define ZIOCB ZIOCB248,9693
+#define IOCB IOCB249,9754
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/atmos.h,1008
+#define _ATMOS_H_ATMOS_H38,2622
+#define COLOR_BLACK COLOR_BLACK50,2792
+#define COLOR_RED COLOR_RED51,2818
+#define COLOR_GREEN COLOR_GREEN52,2842
+#define COLOR_YELLOW COLOR_YELLOW53,2868
+#define COLOR_BLUE COLOR_BLUE54,2895
+#define COLOR_MAGENTA COLOR_MAGENTA55,2920
+#define COLOR_CYAN COLOR_CYAN56,2948
+#define COLOR_WHITE COLOR_WHITE57,2973
+#define VIA VIA63,3043
+#define CH_F1	CH_F168,3135
+#define CH_F2	CH_F269,3155
+#define CH_F3	CH_F370,3175
+#define CH_F4	CH_F471,3195
+#define CH_F5	CH_F572,3215
+#define CH_F6	CH_F673,3235
+#define CH_F7	CH_F774,3255
+#define CH_F8	CH_F875,3275
+#define CH_F9	CH_F976,3295
+#define CH_F10	CH_F1077,3315
+#define CH_ULCORNER CH_ULCORNER82,3361
+#define CH_URCORNER CH_URCORNER83,3386
+#define CH_LLCORNER CH_LLCORNER84,3411
+#define CH_LRCORNER CH_LRCORNER85,3436
+#define CH_TTEE CH_TTEE86,3461
+#define CH_BTEE CH_BTEE87,3486
+#define CH_LTEE CH_LTEE88,3511
+#define CH_RTEE CH_RTEE89,3536
+#define CH_CROSS CH_CROSS90,3561
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/c128.h,1305
+#define _C128_H_C128_H37,2501
+#define CH_F1	CH_F149,2672
+#define CH_F2	CH_F250,2692
+#define CH_F3	CH_F351,2712
+#define CH_F4	CH_F452,2732
+#define CH_F5	CH_F553,2752
+#define CH_F6	CH_F654,2772
+#define CH_F7	CH_F755,2792
+#define CH_F8	CH_F856,2812
+#define COLOR_BLACK COLOR_BLACK59,2853
+#define COLOR_WHITE COLOR_WHITE60,2888
+#define COLOR_RED COLOR_RED61,2923
+#define COLOR_CYAN COLOR_CYAN62,2958
+#define COLOR_VIOLET COLOR_VIOLET63,2988
+#define COLOR_GREEN COLOR_GREEN64,3023
+#define COLOR_BLUE COLOR_BLUE65,3058
+#define COLOR_YELLOW COLOR_YELLOW66,3093
+#define COLOR_ORANGE COLOR_ORANGE67,3128
+#define COLOR_BROWN COLOR_BROWN68,3163
+#define COLOR_LIGHTRED COLOR_LIGHTRED69,3198
+#define COLOR_GRAY1 COLOR_GRAY170,3233
+#define COLOR_GRAY2 COLOR_GRAY271,3268
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN72,3303
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE73,3338
+#define COLOR_GRAY3 COLOR_GRAY374,3373
+#define VIDEOMODE_40x25 VIDEOMODE_40x2577,3434
+#define VIDEOMODE_80x25 VIDEOMODE_80x2578,3471
+#define VIDEOMODE_40COL VIDEOMODE_40COL79,3508
+#define VIDEOMODE_80COL VIDEOMODE_80COL80,3556
+#define VIC VIC86,3648
+#define	SID	SID89,3709
+#define VDC VDC92,3765
+#define CIA1	CIA195,3826
+#define CIA2	CIA296,3865
+#define COLOR_RAM	COLOR_RAM101,3941
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/c16.h,30
+#define _C16_H_C16_H37,2552
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/c64.h,1326
+#define _C64_H_C64_H37,2507
+#define CH_F1	CH_F155,2877
+#define CH_F2	CH_F256,2897
+#define CH_F3	CH_F357,2917
+#define CH_F4	CH_F458,2937
+#define CH_F5	CH_F559,2957
+#define CH_F6	CH_F660,2977
+#define CH_F7	CH_F761,2997
+#define CH_F8	CH_F862,3017
+#define COLOR_BLACK COLOR_BLACK65,3058
+#define COLOR_WHITE COLOR_WHITE66,3093
+#define COLOR_RED COLOR_RED67,3128
+#define COLOR_CYAN COLOR_CYAN68,3163
+#define COLOR_VIOLET COLOR_VIOLET69,3193
+#define COLOR_PURPLE COLOR_PURPLE70,3228
+#define COLOR_GREEN COLOR_GREEN71,3273
+#define COLOR_BLUE COLOR_BLUE72,3308
+#define COLOR_YELLOW COLOR_YELLOW73,3343
+#define COLOR_ORANGE COLOR_ORANGE74,3378
+#define COLOR_BROWN COLOR_BROWN75,3413
+#define COLOR_LIGHTRED COLOR_LIGHTRED76,3448
+#define COLOR_GRAY1 COLOR_GRAY177,3483
+#define COLOR_GRAY2 COLOR_GRAY278,3518
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN79,3553
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE80,3588
+#define COLOR_GRAY3 COLOR_GRAY381,3623
+#define VIC VIC85,3700
+#define	SID	SID88,3761
+#define CIA1	CIA191,3818
+#define CIA2	CIA292,3857
+#define COLOR_RAM	COLOR_RAM95,3931
+#define C64_OS_US C64_OS_US98,4009
+#define C64_OS_PET64 C64_OS_PET6499,4066
+#define C64_OS_SX64 C64_OS_SX64100,4119
+#define C64_EU_NEW C64_EU_NEW101,4171
+#define C64_EU_OLD C64_EU_OLD102,4200
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/cbm.h,1773
+#define _CBM_H_CBM_H37,2507
+#define CH_HLINE CH_HLINE89,3999
+#define CH_VLINE CH_VLINE90,4025
+#define	CH_ULCORNER CH_ULCORNER91,4051
+#define CH_URCORNER CH_URCORNER92,4077
+#define CH_LLCORNER CH_LLCORNER93,4103
+#define CH_LRCORNER CH_LRCORNER94,4129
+#define CH_TTEE	CH_TTEE95,4155
+#define CH_RTEE	CH_RTEE96,4181
+#define CH_BTEE	CH_BTEE97,4207
+#define CH_LTEE	CH_LTEE98,4233
+#define CH_CROSS CH_CROSS99,4259
+#define CH_CURS_UP	CH_CURS_UP100,4285
+#define CH_CURS_DOWN	CH_CURS_DOWN101,4309
+#define CH_CURS_LEFT	CH_CURS_LEFT102,4335
+#define CH_CURS_RIGHT	CH_CURS_RIGHT103,4361
+#define CH_PI	CH_PI104,4388
+#define CH_DEL	CH_DEL105,4408
+#define CH_INS	CH_INS106,4429
+#define CH_ENTER CH_ENTER107,4450
+#define CH_STOP CH_STOP108,4487
+#define CH_ESC CH_ESC109,4523
+#define CBM_T_DEL CBM_T_DEL120,4826
+#define CBM_T_SEQ CBM_T_SEQ121,4852
+#define CBM_T_PRG CBM_T_PRG122,4878
+#define CBM_T_USR CBM_T_USR123,4904
+#define CBM_T_REL CBM_T_REL124,4930
+#define CBM_T_CBM CBM_T_CBM125,4956
+#define CBM_T_DIR CBM_T_DIR126,5013
+#define CBM_T_RESERVED CBM_T_RESERVED127,5079
+#define CBM_T_VRP CBM_T_VRP128,5159
+#define CBM_T_OTHER CBM_T_OTHER129,5225
+#define CBM_T_HEADER CBM_T_HEADER130,5296
+#define CBM_A_RO CBM_A_RO133,5377
+#define CBM_A_RW CBM_A_RW134,5427
+struct cbm_dirent {cbm_dirent136,5478
+    char          name[17];     /* File name in PETSCII, limited to 16 chars */name137,5498
+    unsigned int  size;         /* Size in 256B blocks */size138,5578
+    unsigned char type;type139,5636
+    unsigned char access;access140,5660
+#define TV_NTSC TV_NTSC151,5935
+#define TV_PAL TV_PAL152,5961
+#define TV_OTHER TV_OTHER153,5987
+#define CBM_READ CBM_READ171,6542
+#define CBM_WRITE CBM_WRITE172,6564
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/cbm264.h,2211
+#define _CBM264_H_CBM264_H37,2581
+#define CH_F1 CH_F155,2987
+#define CH_F2 CH_F256,3009
+#define CH_F3 CH_F357,3031
+#define CH_F4 CH_F458,3053
+#define CH_F5 CH_F559,3075
+#define CH_F6 CH_F660,3097
+#define CH_F7 CH_F761,3119
+#define CH_F8 CH_F862,3141
+#define CATTR_LUMA0	CATTR_LUMA067,3189
+#define CATTR_LUMA1	CATTR_LUMA168,3215
+#define CATTR_LUMA2	CATTR_LUMA269,3241
+#define CATTR_LUMA3	CATTR_LUMA370,3267
+#define CATTR_LUMA4	CATTR_LUMA471,3293
+#define CATTR_LUMA5	CATTR_LUMA572,3319
+#define CATTR_LUMA6	CATTR_LUMA673,3345
+#define CATTR_LUMA7	CATTR_LUMA774,3371
+#define CATTR_BLINK	CATTR_BLINK75,3397
+#define BCOLOR_BLACK	BCOLOR_BLACK78,3442
+#define BCOLOR_WHITE	BCOLOR_WHITE79,3469
+#define BCOLOR_RED	BCOLOR_RED80,3496
+#define BCOLOR_CYAN BCOLOR_CYAN81,3521
+#define BCOLOR_VIOLET	BCOLOR_VIOLET82,3558
+#define BCOLOR_PURPLE BCOLOR_PURPLE83,3586
+#define BCOLOR_GREEN	BCOLOR_GREEN84,3632
+#define BCOLOR_BLUE	BCOLOR_BLUE85,3659
+#define BCOLOR_YELLOW	BCOLOR_YELLOW86,3685
+#define BCOLOR_ORANGE	BCOLOR_ORANGE87,3713
+#define BCOLOR_BROWN	BCOLOR_BROWN88,3741
+#define BCOLOR_LEMON	BCOLOR_LEMON89,3768
+#define BCOLOR_LIGHTVIOLET	BCOLOR_LIGHTVIOLET90,3823
+#define BCOLOR_BLUEGREEN	BCOLOR_BLUEGREEN91,3855
+#define BCOLOR_LIGHTBLUE	BCOLOR_LIGHTBLUE92,3885
+#define BCOLOR_DARKBLUE	BCOLOR_DARKBLUE93,3915
+#define BCOLOR_LIGHTGREEN	BCOLOR_LIGHTGREEN94,3945
+#define COLOR_BLACK COLOR_BLACK97,4031
+#define COLOR_WHITE COLOR_WHITE98,4076
+#define COLOR_RED COLOR_RED99,4135
+#define COLOR_CYAN COLOR_CYAN100,4192
+#define COLOR_VIOLET COLOR_VIOLET101,4247
+#define COLOR_PURPLE COLOR_PURPLE102,4307
+#define COLOR_GREEN COLOR_GREEN103,4352
+#define COLOR_BLUE COLOR_BLUE104,4411
+#define COLOR_YELLOW COLOR_YELLOW105,4469
+#define COLOR_ORANGE COLOR_ORANGE106,4529
+#define COLOR_BROWN COLOR_BROWN107,4589
+#define COLOR_LIGHTRED COLOR_LIGHTRED108,4648
+#define COLOR_GRAY1 COLOR_GRAY1109,4705
+#define COLOR_GRAY2 COLOR_GRAY2110,4764
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN111,4823
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE112,4887
+#define COLOR_GRAY3 COLOR_GRAY3113,4950
+#define TED TED117,5050
+#define COLOR_RAM	COLOR_RAM120,5134
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/cbm510.h,1556
+#define _CBM510_H_CBM510_H37,2550
+#define CH_F1	CH_F155,2944
+#define CH_F2	CH_F256,2964
+#define CH_F3	CH_F357,2984
+#define CH_F4	CH_F458,3004
+#define CH_F5	CH_F559,3024
+#define CH_F6	CH_F660,3044
+#define CH_F7	CH_F761,3064
+#define CH_F8	CH_F862,3084
+#define CH_F9	CH_F963,3104
+#define CH_F10	CH_F1064,3124
+#define CH_F11	CH_F1165,3145
+#define CH_F12	CH_F1266,3166
+#define CH_F13	CH_F1367,3187
+#define CH_F14	CH_F1468,3208
+#define CH_F15	CH_F1569,3229
+#define CH_F16	CH_F1670,3250
+#define CH_F17	CH_F1771,3271
+#define CH_F18	CH_F1872,3292
+#define CH_F19	CH_F1973,3313
+#define CH_F20	CH_F2074,3334
+#define COLOR_BLACK COLOR_BLACK77,3376
+#define COLOR_WHITE COLOR_WHITE78,3411
+#define COLOR_RED COLOR_RED79,3446
+#define COLOR_CYAN COLOR_CYAN80,3481
+#define COLOR_VIOLET COLOR_VIOLET81,3511
+#define COLOR_PURPLE COLOR_PURPLE82,3546
+#define COLOR_GREEN COLOR_GREEN83,3591
+#define COLOR_BLUE COLOR_BLUE84,3626
+#define COLOR_YELLOW COLOR_YELLOW85,3661
+#define COLOR_ORANGE COLOR_ORANGE86,3696
+#define COLOR_BROWN COLOR_BROWN87,3731
+#define COLOR_LIGHTRED COLOR_LIGHTRED88,3766
+#define COLOR_GRAY1 COLOR_GRAY189,3801
+#define COLOR_GRAY2 COLOR_GRAY290,3836
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN91,3871
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE92,3906
+#define COLOR_GRAY3 COLOR_GRAY393,3941
+#define VIC VIC97,4018
+#define	SID	SID100,4079
+#define CIA	CIA103,4136
+#define ACIA	ACIA106,4194
+#define TPI1	TPI1109,4253
+#define TPI2	TPI2110,4292
+#define peekbsys(peekbsys127,4890
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/cbm610.h,1034
+#define _CBM610_H_CBM610_H37,2542
+#define CH_F1 CH_F155,2936
+#define CH_F2 CH_F256,2972
+#define CH_F3 CH_F357,3008
+#define CH_F4 CH_F458,3044
+#define CH_F5 CH_F559,3080
+#define CH_F6 CH_F660,3116
+#define CH_F7 CH_F761,3152
+#define CH_F8 CH_F862,3188
+#define CH_F9 CH_F963,3224
+#define CH_F10 CH_F1064,3260
+#define CH_F11 CH_F1165,3296
+#define CH_F12 CH_F1266,3332
+#define CH_F13 CH_F1367,3368
+#define CH_F14 CH_F1468,3404
+#define CH_F15 CH_F1569,3440
+#define CH_F16 CH_F1670,3476
+#define CH_F17 CH_F1771,3512
+#define CH_F18 CH_F1872,3548
+#define CH_F19 CH_F1973,3584
+#define CH_F20 CH_F2074,3620
+#define COLOR_BLACK COLOR_BLACK77,3677
+#define COLOR_WHITE COLOR_WHITE78,3714
+#define CRTC CRTC82,3793
+#define SID	SID85,3853
+#define CIA CIA88,3910
+#define ACIA ACIA91,3972
+#define TPI1 TPI194,4034
+#define TPI2 TPI295,4076
+#define peekbsys(peekbsys112,4677
+#define _textcolor(_textcolor132,5332
+#define _bgcolor(_bgcolor133,5376
+#define _bordercolor(_bordercolor134,5420
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/conio.h,154
+#define _CONIO_H_CONIO_H53,3193
+#  define textcolor(textcolor209,8439
+#  define bgcolor(bgcolor212,8514
+#  define bordercolor(bordercolor215,8591
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/ctype.h,994
+#define _CTYPE_H_CTYPE_H37,2489
+#define _CT_LOWER _CT_LOWER44,2646
+#define _CT_UPPER _CT_UPPER45,2704
+#define _CT_DIGIT _CT_DIGIT46,2759
+#define _CT_XDIGIT _CT_XDIGIT47,2809
+#define _CT_CNTRL _CT_CNTRL48,2882
+#define _CT_SPACE _CT_SPACE49,2939
+#define _CT_OTHER_WS	_CT_OTHER_WS50,3002
+#define _CT_SPACE_TAB	_CT_SPACE_TAB51,3090
+#define _CT_ALNUM _CT_ALNUM54,3175
+#define _CT_ALPHA _CT_ALPHA55,3235
+#define _CT_NOT_GRAPH	_CT_NOT_GRAPH56,3278
+#define _CT_NOT_PRINT _CT_NOT_PRINT57,3324
+#define _CT_NOT_PUNCT	_CT_NOT_PUNCT58,3360
+#define _CT_WS _CT_WS59,3442
+#define isalnum(isalnum91,4515
+#define isalpha(isalpha97,4774
+#define isblank(isblank104,5070
+#define iscntrl(iscntrl111,5336
+#define isdigit(isdigit117,5595
+#define isgraph(isgraph123,5854
+#define islower(islower130,6145
+#define isprint(isprint136,6392
+#define ispunct(ispunct143,6690
+#define isspace(isspace150,6988
+#define isupper(isupper156,7235
+#define isxdigit(isxdigit162,7482
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/dbg.h,60
+#define _DBG_H_DBG_H59,3347
+#define BREAK(BREAK114,5469
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/dio.h,411
+#define _DIO_H_DIO_H34,2338
+typedef unsigned char       driveid_t;driveid_t52,2849
+typedef unsigned int        sectnum_t;sectnum_t53,2888
+typedef unsigned int        sectsize_t;sectsize_t54,2927
+typedef struct __dhandle_t *dhandle_t;dhandle_t55,2967
+  unsigned char  head;head58,3024
+  unsigned       track;track59,3047
+  unsigned       sector;sector60,3071
+} dio_phys_pos;dio_phys_pos61,3096
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/dirent.h,1125
+#define _DIRENT_H_DIRENT_H34,2341
+typedef struct DIR DIR;DIR44,2567
+struct dirent {dirent48,2643
+    char          d_name[16];d_name49,2659
+    unsigned      d_ino;d_ino50,2689
+    unsigned      d_blocks;d_blocks51,2714
+    unsigned long d_size;d_size52,2742
+    unsigned char d_type;d_type53,2768
+        unsigned day  :5;day55,2807
+        unsigned mon  :4;mon56,2833
+        unsigned year :7;year57,2859
+    }             d_cdate;d_cdate58,2885
+        unsigned char min;min60,2925
+        unsigned char hour;hour61,2952
+    }             d_ctime;d_ctime62,2980
+    unsigned char d_access;d_access63,3007
+    unsigned      d_auxtype;d_auxtype64,3035
+        unsigned day  :5;day66,3077
+        unsigned mon  :4;mon67,3103
+        unsigned year :7;year68,3129
+    }             d_mdate;d_mdate69,3155
+        unsigned char min;min71,3195
+        unsigned char hour;hour72,3222
+    }             d_mtime;d_mtime73,3250
+struct dirent {dirent78,3307
+    char d_name[13];  /* 8.3 + trailing 0 */d_name79,3323
+struct dirent {dirent84,3414
+    char d_name[1];d_name85,3430
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/em/em-kernel.h,852
+#define _EM_KERNEL_H_EM_KERNEL_H37,2584
+    char                id[3];          /* Contains 0x65, 0x6d, 0x64 ("emd") */id53,2990
+    unsigned char       version;        /* Interface version */version54,3070
+    void*               install;        /* INSTALL routine */install57,3194
+    void*               deinstall;      /* DEINSTALL routine */deinstall58,3256
+    void*               pagecount;      /* PAGECOUNT routine */pagecount59,3320
+    void*               map;            /* MAP routine */map60,3384
+    void*               use;            /* USE routine */use61,3442
+    void*               mapclean;       /* MAPCLEAN routine */mapclean62,3500
+    void*		copyfrom; 	/* COPYFROM routine */copyfrom63,3563
+    void*               copyto;         /* COPYTO routine */copyto64,3608
+} em_drv_header;em_drv_header66,3670
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/em.h,737
+#define _EM_H_EM_H37,2577
+#define EM_PAGE_SIZE EM_PAGE_SIZE48,2875
+#define EM_ERR_OK EM_ERR_OK51,2928
+#define EM_ERR_NO_DRIVER EM_ERR_NO_DRIVER52,2983
+#define EM_ERR_CANNOT_LOAD EM_ERR_CANNOT_LOAD53,3049
+#define EM_ERR_INV_DRIVER EM_ERR_INV_DRIVER54,3116
+#define EM_ERR_NO_DEVICE EM_ERR_NO_DEVICE55,3177
+struct em_copy {em_copy62,3531
+    void*           buf;        /* Memory buffer to copy from or to */buf63,3548
+    unsigned char   offs;       /* Offset into page */offs64,3619
+    unsigned        page;       /* Starting page to copy from or to */page65,3674
+    unsigned        count;      /* Number of bytes to copy */count66,3745
+    unsigned char   unused;     /* Make the size 8 bytes */unused67,3807
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/errno.h,553
+#define _ERRNO_H_ERRNO_H37,2480
+#define errno errno54,2862
+#define	ENOENT	ENOENT59,2930
+#define ENOMEM	ENOMEM60,2980
+#define EACCES	EACCES61,3018
+#define ENODEV	ENODEV62,3060
+#define EMFILE	EMFILE63,3106
+#define EBUSY	EBUSY64,3150
+#define EINVAL	EINVAL65,3197
+#define ENOSPC	ENOSPC66,3238
+#define EEXIST	EEXIST67,3286
+#define EAGAIN	EAGAIN68,3322
+#define EIO	EIO69,3357
+#define EINTR	EINTR70,3389
+#define ENOSYS	ENOSYS71,3437
+#define ESPIPE	ESPIPE72,3487
+#define ERANGE ERANGE73,3525
+#define EUNKNOWN EUNKNOWN74,3575
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/fcntl.h,267
+#define _FCNTL_H_FCNTL_H37,2529
+#define O_RDONLY O_RDONLY48,2791
+#define O_WRONLY O_WRONLY49,2820
+#define O_RDWR O_RDWR50,2849
+#define O_CREAT O_CREAT51,2878
+#define O_TRUNC O_TRUNC52,2907
+#define O_APPEND O_APPEND53,2936
+#define O_EXCL O_EXCL54,2965
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gconst.h,1489
+#define _GCONST_H_GCONST_H10,162
+#define	NULL	NULL12,181
+#define	FALSE	FALSE13,197
+#define	TRUE	TRUE14,217
+#define	MOUSE_SPRNUM	MOUSE_SPRNUM15,236
+#define	DISK_DRV_LGH	DISK_DRV_LGH16,259
+#define	DRV_NULL	DRV_NULL19,305
+#define	DRV_1541	DRV_154120,324
+#define	DRV_1571	DRV_157121,343
+#define	DRV_1581	DRV_158122,362
+#define	DRV_NETWORK	DRV_NETWORK23,381
+#define	REL_FILE_NUM	REL_FILE_NUM26,434
+#define	CMND_FILE_NUM	CMND_FILE_NUM27,457
+#define	MAX_CMND_STR	MAX_CMND_STR28,482
+#define	DIR_1581_TRACK	DIR_1581_TRACK29,506
+#define	DIR_ACC_CHAN	DIR_ACC_CHAN30,532
+#define	DIR_TRACK	DIR_TRACK31,556
+#define	N_TRACKS	N_TRACKS32,577
+#define	DK_NM_ID_LEN	DK_NM_ID_LEN33,597
+#define	TRACK	TRACK34,621
+#define	SECTOR	SECTOR35,638
+#define	TOTAL_BLOCKS	TOTAL_BLOCKS36,657
+#define	OFF_INDEX_PTR	OFF_INDEX_PTR39,709
+#define	IO_IN	IO_IN42,780
+#define	KRNL_IO_IN	KRNL_IO_IN43,800
+#define	KRNL_BAS_IO_IN	KRNL_BAS_IO_IN44,824
+#define	CIOIN	CIOIN47,888
+#define	CRAM64K	CRAM64K48,908
+#define	CKRNLBASIOIN	CKRNLBASIOIN49,930
+#define	CKRNLIOIN	CKRNLIOIN50,956
+#define	ALARMMASK	ALARMMASK53,999
+#define	CLR_SAVE	CLR_SAVE55,1020
+#define	CONSTRAINED	CONSTRAINED56,1042
+#define	UN_CONSTRAINED	UN_CONSTRAINED57,1067
+#define	FG_SAVE	FG_SAVE58,1092
+#define	FUTURE1	FUTURE160,1115
+#define	FUTURE2	FUTURE261,1134
+#define	FUTURE3	FUTURE362,1153
+#define	FUTURE4	FUTURE463,1172
+#define	USELAST	USELAST64,1192
+#define	SHORTCUT	SHORTCUT65,1213
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gdisk.h,1318
+#define _GDISK_H_GDISK_H8,95
+#define	OFF_TO_BAM	OFF_TO_BAM48,1393
+#define	OFF_DISK_NAME	OFF_DISK_NAME49,1414
+#define	OFF_GS_DTYPE	OFF_GS_DTYPE50,1440
+#define	OFF_OP_TR_SC	OFF_OP_TR_SC51,1465
+#define	OFF_GS_ID	OFF_GS_ID52,1490
+#define	ANY_FAULT	ANY_FAULT54,1550
+#define G_EOF	G_EOF55,1573
+#define	NO_BLOCKS	NO_BLOCKS56,1590
+#define	INV_TRACK	INV_TRACK57,1610
+#define	INSUFF_SPACE	INSUFF_SPACE58,1630
+#define	FULL_DIRECTORY	FULL_DIRECTORY59,1653
+#define	FILE_NOT_FOUND	FILE_NOT_FOUND60,1678
+#define	BAD_BAM	BAD_BAM61,1703
+#define	UNOPENED_VLIR	UNOPENED_VLIR62,1722
+#define	INV_RECORD	INV_RECORD63,1746
+#define	OUT_OF_RECORDS	OUT_OF_RECORDS64,1767
+#define	STRUCT_MISMAT	STRUCT_MISMAT65,1792
+#define	BFR_OVERFLOW	BFR_OVERFLOW66,1817
+#define	CANCEL_ERR	CANCEL_ERR67,1841
+#define	DEV_NOT_FOUND	DEV_NOT_FOUND68,1863
+#define	INCOMPATIBLE	INCOMPATIBLE69,1888
+#define	HDR_NOT_THERE	HDR_NOT_THERE70,1912
+#define	NO_SYNC	NO_SYNC71,1939
+#define	DBLK_NOT_THERE	DBLK_NOT_THERE72,1961
+#define	DAT_CHKSUM_ERR	DAT_CHKSUM_ERR73,1989
+#define	WR_VER_ERR	WR_VER_ERR74,2017
+#define	WR_PR_ON	WR_PR_ON75,2041
+#define	HDR_CHKSUM_ERR	HDR_CHKSUM_ERR76,2063
+#define	DSK_ID_MISMAT	DSK_ID_MISMAT77,2091
+#define	BYTE_DEC_ERR	BYTE_DEC_ERR78,2118
+#define	DOS_MISMATCH	DOS_MISMATCH79,2144
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gdlgbox.h,2209
+#define _GDLGBOX_H_GDLGBOX_H8,91
+    MB_EMPTY=0,MB_EMPTY29,896
+    MB_OK,MB_OK30,912
+    MB_OKCANCEL,MB_OKCANCEL31,923
+    MB_YESNO,MB_YESNO32,940
+    MB_LAST };MB_LAST33,954
+typedef void dlgBoxStr;dlgBoxStr37,1005
+#define DB_DEFPOS(DB_DEFPOS41,1074
+#define DB_SETPOS(DB_SETPOS42,1132
+#define DB_ICON(DB_ICON45,1278
+#define DB_TXTSTR(DB_TXTSTR46,1334
+#define DB_VARSTR(DB_VARSTR47,1407
+#define DB_GETSTR(DB_GETSTR48,1484
+#define DB_SYSOPV(DB_SYSOPV49,1587
+#define DB_GRPHSTR(DB_GRPHSTR50,1642
+#define DB_GETFILES(DB_GETFILES51,1699
+#define DB_OPVEC(DB_OPVEC52,1763
+#define DB_USRICON(DB_USRICON53,1816
+#define DB_USRROUT(DB_USRROUT54,1899
+#define DB_END DB_END55,1958
+#define	OK	OK62,2099
+#define	CANCEL	CANCEL63,2113
+#define	YES	YES64,2131
+#define	NO	NO65,2146
+#define	OPEN	OPEN66,2160
+#define	DISK	DISK67,2176
+#define	DBTXTSTR	DBTXTSTR69,2243
+#define	DBVARSTR	DBVARSTR70,2263
+#define	DBGETSTRING	DBGETSTRING71,2283
+#define	DBSYSOPV	DBSYSOPV72,2306
+#define	DBGRPHSTR	DBGRPHSTR73,2326
+#define	DBGETFILES	DBGETFILES74,2347
+#define	DBOPVEC	DBOPVEC75,2369
+#define	DBUSRICON	DBUSRICON76,2389
+#define	DB_USR_ROUT	DB_USR_ROUT77,2410
+#define	DBI_X_0	DBI_X_079,2475
+#define	DBI_X_1	DBI_X_180,2494
+#define	DBI_X_2	DBI_X_281,2513
+#define	DBI_Y_0	DBI_Y_082,2533
+#define	DBI_Y_1	DBI_Y_183,2554
+#define	DBI_Y_2	DBI_Y_284,2574
+#define	SET_DB_POS	SET_DB_POS86,2630
+#define	DEF_DB_POS	DEF_DB_POS87,2651
+#define	DEF_DB_TOP	DEF_DB_TOP88,2675
+#define	DEF_DB_BOT	DEF_DB_BOT89,2697
+#define	DEF_DB_LEFT	DEF_DB_LEFT90,2720
+#define	DEF_DB_RIGHT	DEF_DB_RIGHT91,2743
+#define	TXT_LN_1_Y	TXT_LN_1_Y93,2809
+#define	TXT_LN_2_Y	TXT_LN_2_Y94,2831
+#define	TXT_LN_3_Y	TXT_LN_3_Y95,2853
+#define	TXT_LN_4_Y	TXT_LN_4_Y96,2875
+#define	TXT_LN_5_Y	TXT_LN_5_Y97,2897
+#define	TXT_LN_X	TXT_LN_X98,2919
+#define	SYSDBI_HEIGHT	SYSDBI_HEIGHT100,2963
+#define	SYSDBI_WIDTH	SYSDBI_WIDTH101,2988
+#define	OFF_DB_FORM	OFF_DB_FORM103,3042
+#define	OFF_DB_TOP	OFF_DB_TOP104,3064
+#define	OFF_DB_BOT	OFF_DB_BOT105,3085
+#define	OFF_DB_LEFT	OFF_DB_LEFT106,3106
+#define	OFF_DB_RIGHT	OFF_DB_RIGHT107,3128
+#define	OFF_DB_1STCMD	OFF_DB_1STCMD108,3151
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gfile.h,1910
+#define _GFILE_H_GFILE_H8,89
+#define	NOT_GEOS	NOT_GEOS46,1432
+#define	BASIC	BASIC47,1451
+#define	ASSEMBLY	ASSEMBLY48,1468
+#define	DATA	DATA49,1487
+#define	SYSTEM	SYSTEM50,1503
+#define	DESK_ACC	DESK_ACC51,1521
+#define	APPLICATION	APPLICATION52,1540
+#define	APPL_DATA	APPL_DATA53,1562
+#define	FONT	FONT54,1582
+#define	PRINTER	PRINTER55,1598
+#define	INPUT_DEVICE	INPUT_DEVICE56,1617
+#define	DISK_DEVICE	DISK_DEVICE57,1641
+#define	SYSTEM_BOOT	SYSTEM_BOOT58,1664
+#define	TEMPORARY	TEMPORARY59,1687
+#define	AUTO_EXEC	AUTO_EXEC60,1708
+#define	INPUT_128	INPUT_12861,1729
+#define	NUMFILETYPES	NUMFILETYPES62,1750
+#define	SEQUENTIAL	SEQUENTIAL64,1801
+#define	VLIR	VLIR65,1822
+#define	DEL	DEL67,1858
+#define	SEQ	SEQ68,1873
+#define	PRG	PRG69,1888
+#define	USR	USR70,1903
+#define	REL	REL71,1918
+#define	CBM	CBM72,1933
+#define	FRST_FILE_ENTRY	FRST_FILE_ENTRY75,2033
+#define	OFF_CFILE_TYPE	OFF_CFILE_TYPE76,2059
+#define	OFF_DE_TR_SC	OFF_DE_TR_SC77,2084
+#define	OFF_FNAME	OFF_FNAME78,2107
+#define	OFF_GHDR_PTR	OFF_GHDR_PTR79,2127
+#define	OFF_GSTRUC_TYPE	OFF_GSTRUC_TYPE80,2151
+#define	OFF_GFILE_TYPE	OFF_GFILE_TYPE81,2178
+#define	OFF_YEAR	OFF_YEAR82,2204
+#define	OFF_SIZE	OFF_SIZE83,2224
+#define	OFF_NXT_FILE	OFF_NXT_FILE84,2244
+#define	O_GHIC_WIDTH	O_GHIC_WIDTH86,2330
+#define	O_GHIC_HEIGHT	O_GHIC_HEIGHT87,2353
+#define	O_GHIC_PIC	O_GHIC_PIC88,2377
+#define	O_GHCMDR_TYPE	O_GHCMDR_TYPE89,2398
+#define	O_GHGEOS_TYPE	O_GHGEOS_TYPE90,2423
+#define	O_GHSTR_TYPE	O_GHSTR_TYPE91,2448
+#define	O_GHST_ADDR	O_GHST_ADDR92,2472
+#define	O_GHEND_ADDR	O_GHEND_ADDR93,2495
+#define	O_GHST_VEC	O_GHST_VEC94,2519
+#define	O_GHFNAME	O_GHFNAME95,2541
+#define	O_128_FLAGS	O_128_FLAGS96,2562
+#define	O_GH_AUTHOR	O_GH_AUTHOR97,2585
+#define	O_GHP_DISK	O_GHP_DISK98,2608
+#define	O_GHP_FNAME	O_GHP_FNAME99,2630
+#define	O_GHINFO_TXT	O_GHINFO_TXT100,2654
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/ggraph.h,4356
+#define _GGRAPH_H_GGRAPH_H8,110
+#define	BLACK	BLACK54,1763
+#define	WHITE	WHITE55,1780
+#define	RED	RED56,1797
+#define	CYAN	CYAN57,1812
+#define	PURPLE	PURPLE58,1828
+#define	GREEN	GREEN59,1846
+#define	BLUE	BLUE60,1863
+#define	YELLOW	YELLOW61,1879
+#define	ORANGE	ORANGE62,1897
+#define	BROWN	BROWN63,1915
+#define	LTRED	LTRED64,1932
+#define	DKGREY	DKGREY65,1950
+#define	GREY	GREY66,1969
+#define	MEDGREY	MEDGREY67,1986
+#define	LTGREEN	LTGREEN68,2006
+#define	LTBLUE	LTBLUE69,2026
+#define	LTGREY	LTGREY70,2045
+#define COLOR_BLACK COLOR_BLACK72,2104
+#define COLOR_WHITE COLOR_WHITE73,2139
+#define COLOR_RED COLOR_RED74,2174
+#define COLOR_CYAN COLOR_CYAN75,2209
+#define COLOR_VIOLET COLOR_VIOLET76,2239
+#define COLOR_GREEN COLOR_GREEN77,2274
+#define COLOR_BLUE COLOR_BLUE78,2309
+#define COLOR_YELLOW COLOR_YELLOW79,2344
+#define COLOR_ORANGE COLOR_ORANGE80,2379
+#define COLOR_BROWN COLOR_BROWN81,2414
+#define COLOR_LIGHTRED COLOR_LIGHTRED82,2449
+#define COLOR_GRAY1 COLOR_GRAY183,2484
+#define COLOR_GRAY2 COLOR_GRAY284,2519
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN85,2554
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE86,2589
+#define COLOR_GRAY3 COLOR_GRAY387,2624
+#define	GRBANK0	GRBANK089,2712
+#define	GRBANK1	GRBANK190,2731
+#define	GRBANK2	GRBANK291,2750
+#define	GRBANK3	GRBANK392,2769
+#define	VIC_X_POS_OFF	VIC_X_POS_OFF94,2811
+#define	VIC_Y_POS_OFF	VIC_Y_POS_OFF95,2836
+#define	SC_BYTE_WIDTH	SC_BYTE_WIDTH96,2861
+#define	SC_PIX_HEIGHT	SC_PIX_HEIGHT97,2886
+#define	SC_PIX_WIDTH	SC_PIX_WIDTH98,2912
+#define	SC_SIZE	SC_SIZE99,2937
+#define	SCREENBYTEWIDTH	SCREENBYTEWIDTH101,2986
+#define	SCREENPIXELWIDTH	SCREENPIXELWIDTH102,3014
+#define	BACKSPACE	BACKSPACE104,3103
+#define	FORWARDSPACE	FORWARDSPACE105,3123
+#define	TAB	TAB106,3146
+#define	LF	LF107,3161
+#define	HOME	HOME108,3176
+#define	PAGE_BREAK	PAGE_BREAK109,3193
+#define	UPLINE	UPLINE110,3215
+#define	CR	CR111,3234
+#define	ULINEON	ULINEON112,3249
+#define	ULINEOFF	ULINEOFF113,3269
+#define	ESC_GRAPHICS	ESC_GRAPHICS114,3289
+#define	ESC_RULER	ESC_RULER115,3313
+#define	REV_ON	REV_ON116,3334
+#define	REV_OFF	REV_OFF117,3353
+#define	GOTOX	GOTOX118,3373
+#define	GOTOY	GOTOY119,3391
+#define	GOTOXY	GOTOXY120,3409
+#define	NEWCARDSET	NEWCARDSET121,3428
+#define	BOLDON	BOLDON122,3450
+#define	ITALICON	ITALICON123,3469
+#define	OUTLINEON	OUTLINEON124,3489
+#define	PLAINTEXT	PLAINTEXT125,3510
+#define CCR	CCR128,3608
+#define CULINEON	CULINEON129,3628
+#define CULINEOFF	CULINEOFF130,3652
+#define CREV_ON	CREV_ON131,3677
+#define CREV_OFF	CREV_OFF132,3701
+#define CBOLDON	CBOLDON133,3725
+#define CITALICON	CITALICON134,3749
+#define COUTLINEON	COUTLINEON135,3774
+#define CPLAINTEXT	CPLAINTEXT136,3800
+#define	UNDERLINE_BIT	UNDERLINE_BIT140,3871
+#define	BOLD_BIT	BOLD_BIT141,3895
+#define	REVERSE_BIT	REVERSE_BIT142,3914
+#define	ITALIC_BIT	ITALIC_BIT143,3936
+#define	OUTLINE_BIT	OUTLINE_BIT144,3957
+#define	SUPERSCRIPT_BIT	SUPERSCRIPT_BIT145,3979
+#define	SUBSCRIPT_BIT	SUBSCRIPT_BIT146,4005
+#define	SET_UNDERLINE	SET_UNDERLINE148,4044
+#define	SET_BOLD	SET_BOLD149,4071
+#define	SET_REVERSE	SET_REVERSE150,4093
+#define	SET_ITALIC	SET_ITALIC151,4118
+#define	SET_OUTLINE	SET_OUTLINE152,4142
+#define	SET_SUPERSCRIPT	SET_SUPERSCRIPT153,4167
+#define	SET_SUBSCRIPT	SET_SUBSCRIPT154,4196
+#define	SET_PLAINTEXT	SET_PLAINTEXT155,4223
+#define	ST_WRGS_FORE	ST_WRGS_FORE157,4276
+#define	ST_WR_BACK	ST_WR_BACK158,4302
+#define	ST_WR_FORE	ST_WR_FORE159,4326
+#define	SET_NOSURPRESS	SET_NOSURPRESS162,4399
+#define	SET_SURPRESS	SET_SURPRESS163,4424
+#define	SET_RIGHTJUST	SET_RIGHTJUST165,4470
+#define	SET_LEFTJUST	SET_LEFTJUST166,4494
+#define	ADD1_W	ADD1_W168,4549
+#define	DOUBLE_B	DOUBLE_B169,4572
+#define	DOUBLE_W	DOUBLE_W170,4594
+#define DRAW_ERASE	DRAW_ERASE172,4655
+#define DRAW_DRAW	DRAW_DRAW173,4679
+#define DRAW_COPY	DRAW_COPY174,4702
+typedef void graphicStr;graphicStr176,4726
+#define MOVEPENTO(MOVEPENTO178,4752
+#define LINETO(LINETO179,4809
+#define RECTANGLETO(RECTANGLETO180,4863
+#define NEWPATTERN(NEWPATTERN181,4922
+#define FRAME_RECTO(FRAME_RECTO182,4963
+#define PEN_X_DELTA(PEN_X_DELTA183,5022
+#define PEN_Y_DELTA(PEN_Y_DELTA184,5068
+#define PEN_XY_DELTA(PEN_XY_DELTA185,5110
+#define GSTR_END GSTR_END186,5171
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gmemory.h,35
+#define _GMEMORY_H_GMEMORY_H8,98
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gmenu.h,1142
+#define _GMENU_H_GMENU_H8,92
+#define	MENU_ACTION	MENU_ACTION24,417
+#define	DYN_SUB_MENU	DYN_SUB_MENU25,442
+#define	SUB_MENU	SUB_MENU26,468
+#define	HORIZONTAL	HORIZONTAL27,490
+#define	VERTICAL	VERTICAL28,514
+#define	OFF_MY_TOP	OFF_MY_TOP30,562
+#define	OFF_MY_BOT	OFF_MY_BOT31,583
+#define	OFF_MX_LEFT	OFF_MX_LEFT32,604
+#define	OFF_MX_RIGHT	OFF_MX_RIGHT33,626
+#define	OFF_NUM_M_ITEMS	OFF_NUM_M_ITEMS34,649
+#define	OFF_1ST_M_ITEM	OFF_1ST_M_ITEM35,675
+#define	OFF_NM_ICNS	OFF_NM_ICNS37,726
+#define	OFF_IC_XMOUSE	OFF_IC_XMOUSE38,748
+#define	OFF_IC_YMOUSE	OFF_IC_YMOUSE39,772
+#define	OFF_PIC_ICON	OFF_PIC_ICON40,796
+#define	OFF_X_ICON_POS	OFF_X_ICON_POS41,819
+#define	OFF_Y_ICON_POS	OFF_Y_ICON_POS42,844
+#define	OFF_WDTH_ICON	OFF_WDTH_ICON43,869
+#define	OFF_HEIGHT_ICON	OFF_HEIGHT_ICON44,893
+#define	OFF_SRV_RT_ICON	OFF_SRV_RT_ICON45,919
+#define	OFF_NX_ICON	OFF_NX_ICON46,945
+#define	ST_FLASH	ST_FLASH48,999
+#define	ST_INVERT	ST_INVERT49,1021
+#define	ST_LD_AT_ADDR	ST_LD_AT_ADDR50,1044
+#define	ST_LD_DATA	ST_LD_DATA51,1071
+#define	ST_PR_DATA	ST_PR_DATA52,1095
+#define	ST_WR_PR	ST_WR_PR53,1119
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gprocess.h,38
+#define _GPROCESS_H_GPROCESS_H8,107
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gsprite.h,1851
+#define _GSPRITE_H_GSPRITE_H8,97
+#define	KEY_F1	KEY_F127,674
+#define	KEY_F2	KEY_F228,692
+#define	KEY_F3	KEY_F329,712
+#define	KEY_F4	KEY_F430,730
+#define	KEY_F5	KEY_F531,748
+#define	KEY_F6	KEY_F632,766
+#define	KEY_NOSCRL	KEY_NOSCRL33,784
+#define	KEY_ENTER	KEY_ENTER34,805
+#define	KEY_F7	KEY_F735,826
+#define	KEY_F8	KEY_F836,845
+#define	KEY_UP	KEY_UP37,864
+#define	KEY_DOWN	KEY_DOWN38,883
+#define	KEY_HOME	KEY_HOME39,903
+#define	KEY_CLEAR	KEY_CLEAR40,923
+#define	KEY_LARROW	KEY_LARROW41,944
+#define	KEY_UPARROR	KEY_UPARROR42,966
+#define	KEY_STOP	KEY_STOP43,989
+#define	KEY_RUN	KEY_RUN44,1009
+#define	KEY_BPS	KEY_BPS45,1029
+#define	KEY_HELP	KEY_HELP46,1049
+#define	KEY_ALT	KEY_ALT47,1069
+#define	KEY_ESC	KEY_ESC48,1089
+#define	KEY_INSERT	KEY_INSERT49,1111
+#define	KEY_DELETE	KEY_DELETE50,1133
+#define	KEY_RIGHT	KEY_RIGHT51,1155
+#define	KEY_INVALID	KEY_INVALID52,1176
+#define	KEY_LEFT	KEY_LEFT53,1199
+#define	OFFTOP_BIT	OFFTOP_BIT57,1306
+#define	OFFBOTTOM_BIT	OFFBOTTOM_BIT58,1327
+#define	OFFLEFT_BIT	OFFLEFT_BIT59,1351
+#define	OFFRIGHT_BIT	OFFRIGHT_BIT60,1373
+#define	OFFMENU_BIT	OFFMENU_BIT61,1396
+#define	SET_OFFTOP	SET_OFFTOP63,1434
+#define	SET_OFFBOTTOM	SET_OFFBOTTOM64,1458
+#define	SET_OFFLEFT	SET_OFFLEFT65,1485
+#define	SET_OFFRIGHT	SET_OFFRIGHT66,1510
+#define	SET_OFFMENU	SET_OFFMENU67,1536
+#define	MOUSEON_BIT	MOUSEON_BIT71,1594
+#define	MENUON_BIT	MENUON_BIT72,1616
+#define	ICONSON_BIT	ICONSON_BIT73,1637
+#define	SET_MSE_ON	SET_MSE_ON75,1675
+#define	SET_MENUON	SET_MENUON76,1699
+#define	SET_ICONSON	SET_ICONSON77,1723
+#define	KEYPRESS_BIT	KEYPRESS_BIT81,1783
+#define	INPUT_BIT	INPUT_BIT82,1806
+#define	MOUSE_BIT	MOUSE_BIT83,1826
+#define	SET_KEYPRESS	SET_KEYPRESS85,1862
+#define	SET_INPUTCHG	SET_INPUTCHG86,1888
+#define	SET_MOUSE	SET_MOUSE87,1914
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gstruct.h,4493
+#define _GSTRUCT_H_GSTRUCT_H17,414
+typedef void (*void_func) (void);void_func19,434
+struct f_date {			/* date in filedesctiptor */f_date21,469
+	char f_year;f_year22,516
+	char f_month;f_month23,530
+	char f_day;f_day24,545
+	char f_hour;f_hour25,558
+	char f_minute;f_minute26,572
+struct s_date {			/* system date & time */s_date29,592
+	char s_year;s_year30,635
+	char s_month;s_month31,649
+	char s_day;s_day32,664
+	char s_hour;s_hour33,677
+	char s_minutes;s_minutes34,691
+	char s_seconds;s_seconds35,708
+struct tr_se {			/* track and sector */tr_se38,729
+	char track;track39,769
+	char sector;sector40,782
+struct fileheader {		/* header block (like fileHeader) */fileheader43,800
+	struct tr_se n_block;n_block44,858
+	char icon_desc[3];icon_desc45,881
+	char icon_pic[63];icon_pic46,901
+	char dostype;dostype47,921
+	char type;type48,936
+	char structure;structure49,948
+	unsigned load_address;load_address50,965
+	unsigned end_address;end_address51,989
+	unsigned exec_address;exec_address52,1012
+	char class_name[19];class_name53,1036
+	char column_flag;column_flag54,1058
+	char author[63];author55,1077
+	char note[96];note56,1095
+struct filehandle {		/* filehandle in directory sectors */filehandle59,1115
+	char dostype;		/* or in dirEntryBuf               */dostype60,1174
+	struct tr_se n_block;n_block61,1228
+	char name[16];name62,1251
+	struct tr_se header;header63,1267
+	char structure;structure64,1289
+	char type;type65,1306
+	struct f_date date;date66,1318
+	unsigned size;size67,1339
+struct pixel {			/* describes point              */pixel70,1359
+	unsigned x;x71,1411
+	char y;y72,1424
+struct fontdesc {		/* describes font               */fontdesc75,1437
+	char baseline;baseline76,1491
+	char width;width77,1507
+	char height;height78,1520
+	char *index_tbl;index_tbl79,1534
+	char *data_ptr;data_ptr80,1552
+struct window {			/* describes screen region      */window83,1573
+	char top;top84,1626
+	char bot;bot85,1637
+	unsigned left;left86,1648
+	unsigned right;right87,1664
+struct VLIR_info {		/* VLIR information             */VLIR_info90,1685
+	char curRecord;		/* currently only used in VLIR  */curRecord91,1740
+	char usedRecords;	/* as system info (curRecord is mainly of your interest */usedRecords92,1793
+	char fileWritten;fileWritten93,1871
+	unsigned fileSize;fileSize94,1890
+struct process {		/* process info, declare table of that type */process97,1914
+	unsigned pointer;	/* (like: struct process proctab[2]=...    */pointer98,1979
+	unsigned jiffies;	/* last entry HAVE TO BE {0,0}              */jiffies99,2044
+struct iconpic {		/* icon/encoded bitmap description          */iconpic103,2115
+	char *pic_ptr;		/* ptr to a photo scrap (or encoded bitmap) */pic_ptr104,2180
+	char x;			/* position in cards (*8 pixels)            */x105,2244
+	char y;y106,2302
+	char width;		/* in cards                                 */width107,2311
+	char heigth;		/* in lines (pixels)                        */heigth108,2372
+struct icondef {		/* icon definition for DoIcons              */icondef111,2438
+	char *pic_ptr;		/* ptr to a photo scrap (or encoded bitmap) */pic_ptr112,2503
+	char x;			/* position in cards (*8 pixels)            */x113,2567
+	char y;y114,2625
+	char width;		/* of icon (in cards)                       */width115,2634
+	char heigth;		/* of icon in lines (pixels)                */heigth116,2695
+	unsigned proc_ptr;	/* pointer to function handling that icon   */proc_ptr117,2757
+struct icontab {icontab120,2828
+	char number;		/* number of declared icons                 */number121,2845
+	struct pixel mousepos;	/* position of mouse after DoIcons          */mousepos122,2907
+	struct icondef tab[];	/* table of size declared by icontab.number */tab123,2978
+struct menuitem {menuitem127,3053
+	char *name;name128,3071
+	char type;type129,3084
+	void *rest;		/* may be ptr to function, or ptr to struct menu (submenu) */rest130,3096
+struct menu {menu133,3176
+	struct window size;size134,3190
+	char number;number135,3211
+	struct menuitem items[];items136,3225
+struct inittab {		/* use struct inittab mytab[n] for initram              */inittab139,3255
+	unsigned ptr;		/* ptr to 1st byte                                      */ptr140,3332
+	char number;		/* number of following bytes                            */number141,3407
+	char values[];		/* actual string of bytes                               */values142,3481
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gsym.h,7659
+#define _GSYM_H_GSYM_H8,110
+#define nameBuf	nameBuf14,180
+#define blockBuf	blockBuf15,206
+#define	zpage	zpage17,234
+#define	CPU_DDR	CPU_DDR19,269
+#define	CPU_DATA	CPU_DATA20,299
+#define	r0	r022,330
+#define	r0L	r0L23,363
+#define	r0H	r0H24,389
+#define	r1	r125,415
+#define	r1L	r1L26,448
+#define	r1H	r1H27,474
+#define drawWindow	drawWindow28,500
+#define	r2	r229,543
+#define	r2L	r2L30,576
+#define	r2H	r2H31,602
+#define	r3	r332,628
+#define	r3L	r3L33,661
+#define	r3H	r3H34,687
+#define	r4	r435,713
+#define	r4L	r4L36,746
+#define	r4H	r4H37,772
+#define	r5	r538,798
+#define	r5L	r5L39,831
+#define	r5H	r5H40,857
+#define	r6	r641,883
+#define	r6L	r6L42,916
+#define	r6H	r6H43,942
+#define	r7	r744,968
+#define	r7L	r7L45,1001
+#define	r7H	r7H46,1027
+#define	r8	r847,1053
+#define	r8L	r8L48,1086
+#define	r8H	r8H49,1112
+#define	r9	r950,1138
+#define	r9L	r9L51,1171
+#define	r9H	r9H52,1197
+#define	r10	r1053,1223
+#define	r10L	r10L54,1257
+#define	r10H	r10H55,1284
+#define	r11	r1156,1311
+#define	r11L	r11L57,1345
+#define	r11H	r11H58,1372
+#define	r12	r1259,1399
+#define	r12L	r12L60,1433
+#define	r12H	r12H61,1460
+#define	r13	r1362,1487
+#define	r13L	r13L63,1521
+#define	r13H	r13H64,1548
+#define	r14	r1465,1575
+#define	r14L	r14L66,1609
+#define	r14H	r14H67,1636
+#define	r15	r1568,1663
+#define	r15L	r15L69,1697
+#define	r15H	r15H70,1724
+#define	curPattern	curPattern72,1752
+#define	string	string73,1792
+#define curFontDesc	curFontDesc74,1829
+#define	currentMode	currentMode75,1875
+#define	dispBufferOn	dispBufferOn76,1908
+#define	mouseOn	mouseOn77,1942
+#define	msePicPtr	msePicPtr78,1972
+#define curWindow	curWindow79,2011
+#define	pressFlag	pressFlag80,2053
+#define mousePos	mousePos81,2084
+#define	returnAddress	returnAddress82,2124
+#define	graphMode	graphMode83,2167
+#define	STATUS	STATUS84,2198
+#define	curDevice	curDevice85,2227
+#define	irqvec	irqvec87,2259
+#define	bkvec	bkvec88,2297
+#define	nmivec	nmivec89,2334
+#define	APP_RAM	APP_RAM91,2373
+#define	BACK_SCR_BASE	BACK_SCR_BASE92,2404
+#define	PRINTBASE	PRINTBASE93,2440
+#define	OS_VARS	OS_VARS94,2472
+#define	diskBlkBuf	diskBlkBuf96,2504
+#define fileHeader	fileHeader97,2542
+#define curDirHead	curDirHead98,2591
+#define fileTrScTab	fileTrScTab99,2629
+#define dirEntryBuf	dirEntryBuf100,2677
+#define DrACurDkNm	DrACurDkNm102,2728
+#define DrBCurDkNm	DrBCurDkNm103,2765
+#define dataFileName	dataFileName104,2802
+#define dataDiskName	dataDiskName105,2841
+#define PrntFileName	PrntFileName106,2880
+#define PrntDiskName	PrntDiskName107,2919
+#define	curDrive	curDrive109,2959
+#define	diskOpenFlg	diskOpenFlg110,2991
+#define	isGEOS	isGEOS111,3026
+#define	interleave	interleave112,3057
+#define	NUMDRV	NUMDRV113,3091
+#define driveType	driveType115,3123
+#define turboFlags	turboFlags116,3159
+#define	VLIRInfo	VLIRInfo118,3197
+#define appMain	appMain120,3244
+#define intTopVector	intTopVector121,3283
+#define intBotVector	intBotVector122,3326
+#define mouseVector	mouseVector123,3369
+#define keyVector	keyVector124,3411
+#define	inputVector	inputVector125,3451
+#define	mouseFaultVec	mouseFaultVec126,3493
+#define	otherPressVec	otherPressVec127,3537
+#define	StringFaultVec	StringFaultVec128,3581
+#define	alarmTmtVector	alarmTmtVector129,3626
+#define	BRKVector	BRKVector130,3671
+#define	RecoverVector	RecoverVector131,3711
+#define	selectionFlash	selectionFlash133,3756
+#define	alphaFlag	alphaFlag134,3794
+#define	iconSelFlg	iconSelFlg135,3827
+#define	faultData	faultData136,3861
+#define	menuNumber	menuNumber137,3894
+#define mouseWindow	mouseWindow138,3928
+#define stringXY	stringXY139,3974
+#define	mousePicData	mousePicData140,4016
+#define	maxMouseSpeed	maxMouseSpeed142,4053
+#define	minMouseSpeed	minMouseSpeed143,4090
+#define	mouseAccel	mouseAccel144,4127
+#define	keyData	keyData145,4161
+#define	mouseData	mouseData146,4193
+#define	inputData	inputData147,4226
+#define	mouseSpeed	mouseSpeed148,4259
+#define	random	random149,4293
+#define	saveFontTab	saveFontTab150,4324
+#define	dblClickCount	dblClickCount152,4373
+#define system_date	system_date153,4410
+#define	alarmSetFlag	alarmSetFlag154,4456
+#define	sysDBData	sysDBData155,4492
+#define	screencolors	screencolors156,4525
+#define	dlgBoxRamBuf	dlgBoxRamBuf157,4561
+#define	savedmoby2	savedmoby2159,4598
+#define	scr80polar	scr80polar160,4632
+#define	scr80colors	scr80colors161,4666
+#define	vdcClrMode	vdcClrMode162,4701
+#define	driveData	driveData163,4735
+#define	ramExpSize	ramExpSize164,4771
+#define	sysRAMFlg	sysRAMFlg165,4805
+#define	firstBoot	firstBoot166,4838
+#define	curType	curType167,4871
+#define	ramBase	ramBase168,4903
+#define inputDevName	inputDevName169,4935
+#define	DrCCurDkNm	DrCCurDkNm170,4974
+#define	DrDCurDkNm	DrDCurDkNm171,5011
+#define	dir2Head	dir2Head172,5048
+#define	SPRITE_PICS	SPRITE_PICS173,5084
+#define sprpic	sprpic174,5118
+#define COLOR_MATRIX	COLOR_MATRIX175,5156
+#define objPointer	objPointer176,5198
+#define	DISK_BASE	DISK_BASE178,5236
+#define	SCREEN_BASE	SCREEN_BASE179,5268
+#define	OS_ROM	OS_ROM180,5302
+#define	OS_JUMPTAB	OS_JUMPTAB181,5332
+#define	EXP_BASE	EXP_BASE182,5365
+#define	MOUSE_BASE_128	MOUSE_BASE_128183,5396
+#define	MOUSE_JMP_128	MOUSE_JMP_128184,5433
+#define	END_MOUSE_128	END_MOUSE_128185,5469
+#define	MOUSE_BASE	MOUSE_BASE186,5505
+#define	MOUSE_JMP	MOUSE_JMP187,5538
+#define	config	config189,5571
+#define	END_MOUSE	END_MOUSE190,5602
+#define	NMI_VECTOR	NMI_VECTOR192,5635
+#define	RESET_VECTOR	RESET_VECTOR193,5676
+#define	IRQ_VECTOR	IRQ_VECTOR194,5719
+#define	vicbase	vicbase196,5761
+#define	sidbase	sidbase197,5792
+#define	mmu	mmu198,5823
+#define	VDC	VDC199,5850
+#define	ctab	ctab200,5877
+#define	cia1base	cia1base201,5905
+#define	cia2base	cia2base202,5936
+#define	mob0xpos	mob0xpos204,5968
+#define	mob0ypos	mob0ypos205,6000
+#define	mob1xpos	mob1xpos206,6032
+#define	mob1ypos	mob1ypos207,6064
+#define	mob2xpos	mob2xpos208,6096
+#define	mob2ypos	mob2ypos209,6128
+#define	mob3xpos	mob3xpos210,6160
+#define	mob3ypos	mob3ypos211,6192
+#define	mob4xpos	mob4xpos212,6224
+#define	mob4ypos	mob4ypos213,6256
+#define	mob5xpos	mob5xpos214,6288
+#define	mob5ypos	mob5ypos215,6320
+#define	mob6xpos	mob6xpos216,6352
+#define	mob6ypos	mob6ypos217,6384
+#define	mob7xpos	mob7xpos218,6416
+#define	mob7ypos	mob7ypos219,6448
+#define	msbxpos	msbxpos220,6480
+#define	grcntrl1	grcntrl1221,6512
+#define	rasreg	rasreg222,6544
+#define	lpxpos	lpxpos223,6575
+#define	lpypos	lpypos224,6606
+#define	mobenble	mobenble225,6637
+#define	grcntrl2	grcntrl2226,6669
+#define	grmemptr	grmemptr227,6701
+#define	grirq	grirq228,6733
+#define	grirqen	grirqen229,6763
+#define	moby2	moby2230,6795
+#define	mobprior	mobprior231,6825
+#define	mobmcm	mobmcm232,6857
+#define	mobx2	mobx2233,6888
+#define	mobmobcol	mobmobcol234,6918
+#define	mobbakcol	mobbakcol235,6951
+#define	extclr	extclr236,6984
+#define	bakclr0	bakclr0237,7015
+#define	bakclr1	bakclr1238,7047
+#define	bakclr2	bakclr2239,7079
+#define	bakclr3	bakclr3240,7111
+#define	mcmclr0	mcmclr0241,7143
+#define	mcmclr1	mcmclr1242,7175
+#define	mob0clr	mob0clr243,7207
+#define	mob1clr	mob1clr244,7239
+#define	mob2clr	mob2clr245,7271
+#define	mob3clr	mob3clr246,7303
+#define	mob4clr	mob4clr247,7335
+#define	mob5clr	mob5clr248,7367
+#define	mob6clr	mob6clr249,7399
+#define	mob7clr	mob7clr250,7431
+#define	keyreg	keyreg251,7463
+#define	clkreg	clkreg252,7494
+#define	vdcreg	vdcreg254,7526
+#define	vdcdata	vdcdata255,7557
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos/gsys.h,357
+#define _GSYS_H_GSYS_H8,84
+#define GEOS64	GEOS6430,544
+#define GEOS128	GEOS12831,565
+#define GEOS_V10	GEOS_V1033,609
+#define GEOS_V12	GEOS_V1234,631
+#define GEOS_V20	GEOS_V2035,672
+#define WHEELS	WHEELS36,694
+#define COLUMNS40	COLUMNS4043,928
+#define COLUMNS80	COLUMNS8044,951
+#define TV_PAL	TV_PAL45,974
+#define TV_NTSC	TV_NTSC46,995
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/geos.h,997
+#define _GEOS_H_GEOS_H11,130
+#define CH_HLINE	CH_HLINE74,938
+#define CH_VLINE	CH_VLINE75,968
+#define CH_ULCORNER	CH_ULCORNER76,998
+#define CH_URCORNER	CH_URCORNER77,1031
+#define CH_LLCORNER	CH_LLCORNER78,1064
+#define CH_LRCORNER	CH_LRCORNER79,1097
+#define CH_TTEE	CH_TTEE80,1130
+#define CH_RTEE	CH_RTEE81,1160
+#define CH_BTEE	CH_BTEE82,1190
+#define CH_LTEE	CH_LTEE83,1220
+#define CH_CROSS	CH_CROSS84,1250
+#define CH_F1	CH_F187,1310
+#define CH_F2	CH_F288,1330
+#define CH_F3	CH_F389,1350
+#define CH_F4	CH_F490,1370
+#define CH_F5	CH_F591,1390
+#define CH_F6	CH_F692,1410
+#define CH_F7	CH_F793,1430
+#define CH_F8	CH_F894,1450
+#define CH_CURS_UP	CH_CURS_UP96,1471
+#define CH_CURS_DOWN	CH_CURS_DOWN97,1495
+#define CH_CURS_LEFT	CH_CURS_LEFT98,1521
+#define CH_CURS_RIGHT	CH_CURS_RIGHT99,1547
+#define CH_DEL	CH_DEL100,1574
+#define CH_INS	CH_INS101,1595
+#define CH_ENTER	CH_ENTER102,1616
+#define CH_STOP	CH_STOP103,1639
+#define CH_ESC	CH_ESC104,1661
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/inttypes.h,4457
+#define _INTTYPES_H_INTTYPES_H44,2797
+#define PRId8 PRId863,3185
+#define PRId16 PRId1664,3221
+#define PRId32 PRId3265,3257
+#define PRIdLEAST8 PRIdLEAST867,3295
+#define PRIdLEAST16 PRIdLEAST1668,3331
+#define PRIdLEAST32 PRIdLEAST3269,3367
+#define PRIdFAST8 PRIdFAST871,3405
+#define PRIdFAST16 PRIdFAST1672,3441
+#define PRIdFAST32 PRIdFAST3273,3477
+#define PRIdMAX PRIdMAX75,3515
+#define PRIdPTR PRIdPTR76,3552
+#define PRIi8 PRIi878,3589
+#define PRIi16 PRIi1679,3625
+#define PRIi32 PRIi3280,3661
+#define PRIiLEAST8 PRIiLEAST882,3699
+#define PRIiLEAST16 PRIiLEAST1683,3735
+#define PRIiLEAST32 PRIiLEAST3284,3771
+#define PRIiFAST8 PRIiFAST886,3809
+#define PRIiFAST16 PRIiFAST1687,3845
+#define PRIiFAST32 PRIiFAST3288,3881
+#define PRIiMAX PRIiMAX90,3919
+#define PRIiPTR PRIiPTR91,3956
+#define PRIo8 PRIo894,4038
+#define PRIo16 PRIo1695,4074
+#define PRIo32 PRIo3296,4110
+#define PRIoLEAST8 PRIoLEAST898,4148
+#define PRIoLEAST16 PRIoLEAST1699,4184
+#define PRIoLEAST32 PRIoLEAST32100,4220
+#define PRIoFAST8 PRIoFAST8102,4258
+#define PRIoFAST16 PRIoFAST16103,4294
+#define PRIoFAST32 PRIoFAST32104,4330
+#define PRIoMAX PRIoMAX106,4368
+#define PRIoPTR PRIoPTR107,4405
+#define PRIu8 PRIu8109,4442
+#define PRIu16 PRIu16110,4478
+#define PRIu32 PRIu32111,4514
+#define PRIuLEAST8 PRIuLEAST8113,4552
+#define PRIuLEAST16 PRIuLEAST16114,4588
+#define PRIuLEAST32 PRIuLEAST32115,4624
+#define PRIuFAST8 PRIuFAST8117,4662
+#define PRIuFAST16 PRIuFAST16118,4698
+#define PRIuFAST32 PRIuFAST32119,4734
+#define PRIuMAX PRIuMAX121,4772
+#define PRIuPTR PRIuPTR122,4809
+#define PRIx8 PRIx8124,4846
+#define PRIx16 PRIx16125,4882
+#define PRIx32 PRIx32126,4918
+#define PRIxLEAST8 PRIxLEAST8128,4956
+#define PRIxLEAST16 PRIxLEAST16129,4992
+#define PRIxLEAST32 PRIxLEAST32130,5028
+#define PRIxFAST8 PRIxFAST8132,5066
+#define PRIxFAST16 PRIxFAST16133,5102
+#define PRIxFAST32 PRIxFAST32134,5138
+#define PRIxMAX PRIxMAX136,5176
+#define PRIxPTR PRIxPTR137,5213
+#define PRIX8 PRIX8139,5250
+#define PRIX16 PRIX16140,5286
+#define PRIX32 PRIX32141,5322
+#define PRIXLEAST8 PRIXLEAST8143,5360
+#define PRIXLEAST16 PRIXLEAST16144,5396
+#define PRIXLEAST32 PRIXLEAST32145,5432
+#define PRIXFAST8 PRIXFAST8147,5470
+#define PRIXFAST16 PRIXFAST16148,5506
+#define PRIXFAST32 PRIXFAST32149,5542
+#define PRIXMAX PRIXMAX151,5580
+#define PRIXPTR PRIXPTR152,5617
+#define SCNd8 SCNd8155,5696
+#define SCNd16 SCNd16156,5733
+#define SCNd32 SCNd32157,5769
+#define SCNdLEAST8 SCNdLEAST8159,5807
+#define SCNdLEAST16 SCNdLEAST16160,5844
+#define SCNdLEAST32 SCNdLEAST32161,5880
+#define SCNdFAST8 SCNdFAST8163,5918
+#define SCNdFAST16 SCNdFAST16164,5955
+#define SCNdFAST32 SCNdFAST32165,5991
+#define SCNdMAX SCNdMAX167,6029
+#define SCNdPTR SCNdPTR168,6066
+#define SCNi8 SCNi8170,6103
+#define SCNi16 SCNi16171,6140
+#define SCNi32 SCNi32172,6176
+#define SCNiLEAST8 SCNiLEAST8174,6214
+#define SCNiLEAST16 SCNiLEAST16175,6251
+#define SCNiLEAST32 SCNiLEAST32176,6287
+#define SCNiFAST8 SCNiFAST8178,6325
+#define SCNiFAST16 SCNiFAST16179,6362
+#define SCNiFAST32 SCNiFAST32180,6398
+#define SCNiMAX SCNiMAX182,6436
+#define SCNiPTR SCNiPTR183,6473
+#define SCNo8 SCNo8186,6554
+#define SCNo16 SCNo16187,6591
+#define SCNo32 SCNo32188,6627
+#define SCNoLEAST8 SCNoLEAST8190,6665
+#define SCNoLEAST16 SCNoLEAST16191,6702
+#define SCNoLEAST32 SCNoLEAST32192,6738
+#define SCNoFAST8 SCNoFAST8194,6776
+#define SCNoFAST16 SCNoFAST16195,6813
+#define SCNoFAST32 SCNoFAST32196,6849
+#define SCNoMAX SCNoMAX198,6887
+#define SCNoPTR SCNoPTR199,6924
+#define SCNu8 SCNu8201,6961
+#define SCNu16 SCNu16202,6998
+#define SCNu32 SCNu32203,7034
+#define SCNuLEAST8 SCNuLEAST8205,7072
+#define SCNuLEAST16 SCNuLEAST16206,7109
+#define SCNuLEAST32 SCNuLEAST32207,7145
+#define SCNuFAST8 SCNuFAST8209,7183
+#define SCNuFAST16 SCNuFAST16210,7220
+#define SCNuFAST32 SCNuFAST32211,7256
+#define SCNuMAX SCNuMAX213,7294
+#define SCNuPTR SCNuPTR214,7331
+#define SCNx8 SCNx8216,7368
+#define SCNx16 SCNx16217,7405
+#define SCNx32 SCNx32218,7441
+#define SCNxLEAST8 SCNxLEAST8220,7479
+#define SCNxLEAST16 SCNxLEAST16221,7516
+#define SCNxLEAST32 SCNxLEAST32222,7552
+#define SCNxFAST8 SCNxFAST8224,7590
+#define SCNxFAST16 SCNxFAST16225,7627
+#define SCNxFAST32 SCNxFAST32226,7663
+#define SCNxMAX SCNxMAX228,7701
+#define SCNxPTR SCNxPTR229,7738
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/iso646.h,345
+#define _ISO646_H_ISO646_H37,2492
+#define	and	and42,2535
+#define and_eq	and_eq43,2550
+#define bitand	bitand44,2568
+#define bitor	bitor45,2585
+#define compl	compl46,2601
+#define not	not47,2617
+#define not_eq	not_eq48,2631
+#define or	or49,2649
+#define or_eq	or_eq50,2663
+#define xor	xor51,2680
+#define xor_eq	xor_eq52,2694
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/joystick/joy-kernel.h,680
+#define _JOY_KERNEL_H_JOY_KERNEL_H37,2585
+    char                id[3];          /* Contains 0x6a, 0x6f, 0x79 ("joy") */id53,2984
+    unsigned char       version;        /* Interface version */version54,3064
+    unsigned char       masks[8];masks57,3200
+    void*               install;        /* INSTALL routine */install60,3294
+    void*               uninstall;      /* UNINSTALL routine */uninstall61,3356
+    void*               count;          /* COUNT routine */count62,3420
+    void*               read;           /* READ routine */read63,3480
+    void*               irq;            /* IRQ routine */irq64,3539
+} joy_drv_header;joy_drv_header66,3598
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/joystick.h,823
+#define _JOYSTICK_H_JOYSTICK_H37,2512
+#define JOY_ERR_OK JOY_ERR_OK48,2796
+#define JOY_ERR_NO_DRIVER JOY_ERR_NO_DRIVER49,2851
+#define JOY_ERR_CANNOT_LOAD JOY_ERR_CANNOT_LOAD50,2917
+#define JOY_ERR_INV_DRIVER JOY_ERR_INV_DRIVER51,2984
+#define JOY_ERR_NO_DEVICE JOY_ERR_NO_DEVICE52,3045
+#define JOY_1	JOY_155,3161
+#define JOY_2	JOY_256,3178
+#define JOY_UP JOY_UP59,3261
+#define JOY_DOWN JOY_DOWN60,3287
+#define JOY_LEFT JOY_LEFT61,3313
+#define JOY_RIGHT JOY_RIGHT62,3339
+#define JOY_FIRE JOY_FIRE63,3365
+#define JOY_FIRE2 JOY_FIRE264,3391
+#define JOY_BTN_UP(JOY_BTN_UP70,3643
+#define JOY_BTN_DOWN(JOY_BTN_DOWN71,3701
+#define JOY_BTN_LEFT(JOY_BTN_LEFT72,3761
+#define JOY_BTN_RIGHT(JOY_BTN_RIGHT73,3821
+#define JOY_BTN_FIRE(JOY_BTN_FIRE74,3882
+#define JOY_BTN_FIRE2(JOY_BTN_FIRE275,3942
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/limits.h,567
+#define _LIMITS_H_LIMITS_H37,2492
+#define CHAR_BIT	CHAR_BIT41,2513
+#define SCHAR_MIN	SCHAR_MIN43,2533
+#define SCHAR_MAX	SCHAR_MAX44,2572
+#define UCHAR_MAX	UCHAR_MAX46,2595
+#define CHAR_MIN	CHAR_MIN48,2618
+#define CHAR_MAX	CHAR_MAX49,2637
+#define SHRT_MIN SHRT_MIN51,2659
+#define SHRT_MAX	SHRT_MAX52,2700
+#define USHRT_MAX	USHRT_MAX54,2724
+#define INT_MIN	INT_MIN56,2750
+#define INT_MAX	INT_MAX57,2789
+#define UINT_MAX	UINT_MAX59,2813
+#define LONG_MAX	LONG_MAX61,2838
+#define LONG_MIN LONG_MIN62,2867
+#define ULONG_MAX	ULONG_MAX64,2912
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/locale.h,1194
+#define _LOCALE_H_LOCALE_H37,2499
+#define NULL	NULL43,2558
+#define _HAVE_NULL_HAVE_NULL44,2573
+#define LC_ALL	LC_ALL48,2635
+#define LC_COLLATE	LC_COLLATE49,2653
+#define LC_CTYPE	LC_CTYPE50,2674
+#define LC_MONETARY	LC_MONETARY51,2693
+#define LC_NUMERIC	LC_NUMERIC52,2715
+#define LC_TIME	LC_TIME53,2736
+struct lconv {lconv56,2796
+    char*	currency_symbol;currency_symbol57,2811
+    char*	decimal_point;decimal_point58,2838
+    char*	grouping;grouping59,2863
+    char*	int_curr_symbol;int_curr_symbol60,2883
+    char*	mon_decimal_point;mon_decimal_point61,2910
+    char*	mon_grouping;mon_grouping62,2939
+    char*	mon_thousands_sep;mon_thousands_sep63,2963
+    char*	negative_sign;negative_sign64,2992
+    char*	positive_sign;positive_sign65,3017
+    char*	thousands_sep;thousands_sep66,3042
+    char	frac_digits;frac_digits67,3067
+    char	int_frac_digits;int_frac_digits68,3089
+    char	n_cs_precedes;n_cs_precedes69,3115
+    char	n_sep_by_space;n_sep_by_space70,3139
+    char	n_sign_posn;n_sign_posn71,3164
+    char	p_cs_precedes;p_cs_precedes72,3186
+    char	p_sep_by_space;p_sep_by_space73,3210
+    char	p_sign_posn;p_sign_posn74,3235
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/lynx.h,1047
+#define _LYNX_H_LYNX_H37,2579
+#define COLOR_BLACK COLOR_BLACK55,2974
+#define COLOR_RED COLOR_RED56,3011
+#define COLOR_BLUE COLOR_BLUE57,3048
+#define COLOR_GREEN COLOR_GREEN58,3085
+#define COLOR_VIOLET COLOR_VIOLET59,3122
+#define COLOR_PURPLE COLOR_PURPLE60,3159
+#define COLOR_CYAN COLOR_CYAN61,3204
+#define COLOR_PEAGREEN COLOR_PEAGREEN62,3241
+#define COLOR_GREY COLOR_GREY63,3278
+#define COLOR_NAVYBLUE COLOR_NAVYBLUE64,3315
+#define COLOR_LIGHTRED COLOR_LIGHTRED65,3352
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE66,3389
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN67,3426
+#define COLOR_LIGHTPURPLE COLOR_LIGHTPURPLE68,3463
+#define COLOR_LIGHTCYAN COLOR_LIGHTCYAN69,3500
+#define COLOR_YELLOW COLOR_YELLOW70,3537
+#define COLOR_WHITE COLOR_WHITE71,3574
+#define tgi_sprite(tgi_sprite106,4766
+#define tgi_flip(tgi_flip107,4820
+#define tgi_setbgcolor(tgi_setbgcolor108,4855
+#define tgi_setframerate(tgi_setframerate109,4917
+#define tgi_busy(tgi_busy110,4979
+#define tgi_updatedisplay(tgi_updatedisplay111,5014
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/modload.h,729
+#define _MODLOAD_H_MODLOAD_H43,2672
+struct mod_ctrl {mod_ctrl52,3002
+    int __fastcall__  (*read) (int callerdata, void* buffer, unsigned count);read64,3730
+    int               callerdata;callerdata65,3808
+    void*             module;           /* Pointer to module data */module68,3890
+    unsigned          module_size;      /* Total size of loaded module */module_size69,3959
+    unsigned          module_id;        /* Module id */module_id70,4033
+#define MLOAD_OK MLOAD_OK90,4583
+#define MLOAD_ERR_READ MLOAD_ERR_READ91,4652
+#define MLOAD_ERR_HDR MLOAD_ERR_HDR92,4709
+#define MLOAD_ERR_OS MLOAD_ERR_OS93,4768
+#define MLOAD_ERR_FMT MLOAD_ERR_FMT94,4823
+#define MLOAD_ERR_MEM MLOAD_ERR_MEM95,4887
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/mouse/mouse-kernel.h,48
+#define _MOUSE_KERNEL_H_MOUSE_KERNEL_H37,2587
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/mouse.h,1151
+#define _MOUSE_H_MOUSE_H39,2639
+#define MOUSE_ERR_OK MOUSE_ERR_OK50,2883
+#define MOUSE_ERR_NO_DRIVER MOUSE_ERR_NO_DRIVER51,2938
+#define MOUSE_ERR_CANNOT_LOAD MOUSE_ERR_CANNOT_LOAD52,3004
+#define MOUSE_ERR_INV_DRIVER MOUSE_ERR_INV_DRIVER53,3071
+#define MOUSE_ERR_NO_DEVICE MOUSE_ERR_NO_DEVICE54,3132
+#define MOUSE_ERR_INV_IOCTL MOUSE_ERR_INV_IOCTL55,3203
+#define MOUSE_BTN_LEFT	MOUSE_BTN_LEFT58,3294
+#define MOUSE_BTN_RIGHT MOUSE_BTN_RIGHT59,3327
+struct mouse_pos {mouse_pos62,3411
+    int 		x;x63,3430
+    int 		y;y64,3443
+struct mouse_info {mouse_info68,3515
+    struct mouse_pos    pos;           /* Mouse position */pos69,3535
+    unsigned char       buttons;       /* Mouse button mask */buttons70,3595
+struct mouse_box {mouse_box74,3701
+    int         	minx;minx75,3720
+    int         	miny;miny76,3743
+    int         	maxx;maxx77,3766
+    int         	maxy;maxy78,3789
+struct mouse_callbacks {mouse_callbacks85,4030
+    void (*hide) (void);hide87,4056
+    void (*show) (void);show90,4115
+    void __fastcall__ (*movex) (int x);movex93,4173
+    void __fastcall__ (*movey) (int y);movey98,4353
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/nes.h,1504
+#define _NES_H_NES_H34,2267
+#define CH_ENTER	CH_ENTER46,2438
+#define CH_CURS_UP	CH_CURS_UP47,2468
+#define CH_CURS_DOWN	CH_CURS_DOWN48,2493
+#define CH_CURS_LEFT	CH_CURS_LEFT49,2527
+#define CH_CURS_RIGHT	CH_CURS_RIGHT50,2561
+#define CH_ESC	CH_ESC51,2596
+#define CH_DEL	CH_DEL52,2622
+#define CH_CROSS	CH_CROSS54,2650
+#define CH_RTEE CH_RTEE55,2680
+#define CH_LTEE CH_LTEE56,2717
+#define CH_TTEE CH_TTEE57,2754
+#define CH_BTEE CH_BTEE58,2791
+#define CH_HLINE CH_HLINE59,2828
+#define CH_VLINE CH_VLINE60,2865
+#define CH_ULCORNER CH_ULCORNER61,2902
+#define CH_URCORNER CH_URCORNER62,2939
+#define CH_LLCORNER CH_LLCORNER63,2976
+#define CH_LRCORNER CH_LRCORNER64,3013
+#define CH_PI CH_PI65,3050
+#define COLOR_BLACK COLOR_BLACK69,3109
+#define COLOR_WHITE COLOR_WHITE70,3144
+#define COLOR_RED COLOR_RED71,3179
+#define COLOR_CYAN COLOR_CYAN72,3214
+#define COLOR_VIOLET COLOR_VIOLET73,3244
+#define COLOR_GREEN COLOR_GREEN74,3279
+#define COLOR_BLUE COLOR_BLUE75,3314
+#define COLOR_YELLOW COLOR_YELLOW76,3349
+#define COLOR_ORANGE COLOR_ORANGE77,3384
+#define COLOR_BROWN COLOR_BROWN78,3419
+#define COLOR_LIGHTRED COLOR_LIGHTRED79,3454
+#define COLOR_GRAY1 COLOR_GRAY180,3489
+#define COLOR_GRAY2 COLOR_GRAY281,3524
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN82,3559
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE83,3594
+#define COLOR_GRAY3 COLOR_GRAY384,3629
+#define TV_NTSC TV_NTSC87,3694
+#define TV_PAL TV_PAL88,3720
+#define TV_OTHER TV_OTHER89,3746
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/o65.h,3689
+#define _O65_H_O65_H47,2751
+typedef unsigned o65_size;o65_size52,2843
+typedef struct o65_header o65_header;o65_header56,2921
+struct o65_header {o65_header57,2959
+    char        marker[2];      /* Non-C64 marker */marker58,2979
+    char        magic[3];       /* o65 magic */magic59,3032
+    char        version;	/* Version number */version60,3080
+    unsigned    mode;           /* Mode word */mode61,3126
+    o65_size	tbase;          /* Original text (code) segment address */tbase62,3174
+    o65_size    tlen;           /* Size of text (code) segment */tlen63,3246
+    o65_size    dbase;          /* Original data segment address */dbase64,3312
+    o65_size    dlen;           /* Size of data segment */dlen65,3380
+    o65_size    bbase;          /* Original bss segment address */bbase66,3439
+    o65_size    blen;           /* Size of bss segment */blen67,3506
+    o65_size    zbase;          /* Original zp segment address */zbase68,3564
+    o65_size    zlen;           /* Size of zp segment */zlen69,3630
+    o65_size    stack;          /* Stacksize needed */stack70,3687
+#define O65_MARKER_0 O65_MARKER_076,3787
+#define O65_MARKER_1 O65_MARKER_177,3824
+#define O65_MAGIC_0 O65_MAGIC_078,3861
+#define O65_MAGIC_1 O65_MAGIC_179,3911
+#define O65_MAGIC_2 O65_MAGIC_280,3961
+#define O65_VERSION O65_VERSION81,4011
+#define O65_CPU_65816 O65_CPU_6581684,4081
+#define O65_CPU_6502 O65_CPU_650285,4151
+#define O65_CPU_MASK O65_CPU_MASK86,4224
+#define O65_RELOC_PAGE O65_RELOC_PAGE88,4296
+#define O65_RELOC_BYTE O65_RELOC_BYTE89,4363
+#define O65_RELOC_MASK O65_RELOC_MASK90,4430
+#define O65_SIZE_32BIT O65_SIZE_32BIT92,4509
+#define O65_SIZE_16BIT O65_SIZE_16BIT93,4580
+#define O65_SIZE_MASK O65_SIZE_MASK94,4651
+#define O65_FTYPE_OBJ O65_FTYPE_OBJ96,4719
+#define O65_FTYPE_EXE O65_FTYPE_EXE97,4777
+#define O65_FTYPE_MASK O65_FTYPE_MASK98,4839
+#define O65_ADDR_SIMPLE O65_ADDR_SIMPLE100,4907
+#define O65_ADDR_DEFAULT O65_ADDR_DEFAULT101,4971
+#define O65_ADDR_MASK O65_ADDR_MASK102,5036
+#define O65_ALIGN_1 O65_ALIGN_1104,5110
+#define O65_ALIGN_2 O65_ALIGN_2105,5175
+#define O65_ALIGN_4 O65_ALIGN_4106,5233
+#define O65_ALIGN_256 O65_ALIGN_256107,5295
+#define O65_ALIGN_MASK O65_ALIGN_MASK108,5365
+#define O65_MODE_CC65 O65_MODE_CC65111,5490
+#define O65_SEGID_UNDEF O65_SEGID_UNDEF119,5861
+#define O65_SEGID_ABS	O65_SEGID_ABS120,5892
+#define O65_SEGID_TEXT O65_SEGID_TEXT121,5927
+#define O65_SEGID_DATA	O65_SEGID_DATA122,5958
+#define O65_SEGID_BSS	O65_SEGID_BSS123,5994
+#define O65_SEGID_ZP O65_SEGID_ZP124,6029
+#define O65_SEGID_MASK O65_SEGID_MASK125,6064
+#define O65_RTYPE_WORD O65_RTYPE_WORD128,6130
+#define O65_RTYPE_HIGH O65_RTYPE_HIGH129,6167
+#define O65_RTYPE_LOW O65_RTYPE_LOW130,6204
+#define O65_RTYPE_SEGADDR O65_RTYPE_SEGADDR131,6241
+#define O65_RTYPE_SEG O65_RTYPE_SEG132,6278
+#define O65_RTYPE_MASK O65_RTYPE_MASK133,6315
+#define O65_SEGID_UNDEF O65_SEGID_UNDEF136,6371
+#define O65_SEGID_ABS O65_SEGID_ABS137,6408
+#define O65_SEGID_TEXT O65_SEGID_TEXT138,6445
+#define O65_SEGID_DATA O65_SEGID_DATA139,6482
+#define O65_SEGID_BSS O65_SEGID_BSS140,6519
+#define O65_SEGID_ZP O65_SEGID_ZP141,6556
+#define O65_SEGID_MASK O65_SEGID_MASK142,6593
+#define O65_OPT_FILENAME O65_OPT_FILENAME145,6649
+#define O65_OPT_OS O65_OPT_OS146,6683
+#define O65_OPT_ASM	O65_OPT_ASM147,6710
+#define O65_OPT_AUTHOR	O65_OPT_AUTHOR148,6733
+#define O65_OPT_TIMESTAMP	O65_OPT_TIMESTAMP149,6759
+#define O65_OS_OSA65	O65_OS_OSA65152,6832
+#define O65_OS_LUNIX	O65_OS_LUNIX153,6856
+#define O65_OS_CC65 O65_OS_CC65154,6880
+#define O65_OS_OPENCBM O65_OS_OPENCBM155,6914
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/peekpoke.h,152
+#define _PEEKPOKE_H_PEEKPOKE_H37,2583
+#define POKE(POKE47,2849
+#define POKEW(POKEW48,2911
+#define PEEK(PEEK49,2968
+#define PEEKW(PEEKW50,3022
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/pet.h,362
+#define _PET_H_PET_H37,2564
+#define COLOR_BLACK COLOR_BLACK55,2970
+#define COLOR_WHITE COLOR_WHITE56,3007
+#define PIA1 PIA160,3085
+#define PIA2 PIA261,3126
+#define VIA VIA64,3187
+#define CRTC CRTC68,3286
+#define ACIA ACIA72,3367
+#define _textcolor(_textcolor86,3823
+#define _bgcolor(_bgcolor87,3867
+#define _bordercolor(_bordercolor88,3911
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/plus4.h,61
+#define _PLUS4_H_PLUS4_H37,2542
+#define ACIA ACIA56,2845
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/rs232.h,2934
+#define _RS232_h_RS232_h14,188
+#define RS_BAUD_50 RS_BAUD_5026,466
+#define RS_BAUD_110 RS_BAUD_11027,504
+#define RS_BAUD_134_5 RS_BAUD_134_528,542
+#define RS_BAUD_300 RS_BAUD_30029,582
+#define RS_BAUD_600 RS_BAUD_60030,620
+#define RS_BAUD_1200 RS_BAUD_120031,658
+#define RS_BAUD_2400 RS_BAUD_240032,696
+#define RS_BAUD_4800 RS_BAUD_480033,734
+#define RS_BAUD_9600 RS_BAUD_960034,772
+#define RS_BAUD_19200 RS_BAUD_1920035,810
+#define RS_BAUD_38400 RS_BAUD_3840036,848
+#define RS_BAUD_57600 RS_BAUD_5760037,886
+#define RS_BAUD_115200 RS_BAUD_11520038,924
+#define RS_BAUD_230400 RS_BAUD_23040039,962
+#define RS_BITS_5 RS_BITS_542,1025
+#define RS_BITS_6 RS_BITS_643,1063
+#define RS_BITS_7 RS_BITS_744,1101
+#define RS_BITS_8 RS_BITS_845,1139
+#define RS_PAR_NONE RS_PAR_NONE48,1200
+#define RS_PAR_ODD RS_PAR_ODD49,1238
+#define RS_PAR_EVEN RS_PAR_EVEN50,1276
+#define RS_PAR_MARK RS_PAR_MARK51,1314
+#define RS_PAR_SPACE RS_PAR_SPACE52,1352
+#define RS_STATUS_PE RS_STATUS_PE55,1467
+#define RS_STATUS_FE	RS_STATUS_FE56,1524
+#define RS_STATUS_OVERRUN	RS_STATUS_OVERRUN57,1572
+#define RS_STATUS_RDRF	RS_STATUS_RDRF58,1624
+#define RS_STATUS_THRE	RS_STATUS_THRE59,1688
+#define RS_STATUS_DCD	RS_STATUS_DCD60,1752
+#define RS_STATUS_DSR	RS_STATUS_DSR61,1811
+#define RS_STATUS_IRQ RS_STATUS_IRQ62,1865
+#define RS_BAUD_300 RS_BAUD_30067,1974
+#define RS_BAUD_45_5 RS_BAUD_45_568,2012
+#define RS_BAUD_50 RS_BAUD_5069,2050
+#define RS_BAUD_56_875 RS_BAUD_56_87570,2088
+#define RS_BAUD_75 RS_BAUD_7571,2126
+#define RS_BAUD_110 RS_BAUD_11072,2160
+#define RS_BAUD_134_5 RS_BAUD_134_573,2198
+#define RS_BAUD_150 RS_BAUD_15074,2238
+#define RS_BAUD_600 RS_BAUD_60076,2331
+#define RS_BAUD_1200 RS_BAUD_120077,2369
+#define RS_BAUD_1800 RS_BAUD_180078,2407
+#define RS_BAUD_2400 RS_BAUD_240079,2445
+#define RS_BAUD_4800 RS_BAUD_480080,2483
+#define RS_BAUD_9600 RS_BAUD_960081,2521
+#define RS_BITS_5 RS_BITS_584,2584
+#define RS_BITS_6 RS_BITS_685,2622
+#define RS_BITS_7 RS_BITS_786,2660
+#define RS_BITS_8 RS_BITS_887,2698
+#define RS_PAR_NONE RS_PAR_NONE90,2759
+#define RS_PAR_ODD RS_PAR_ODD91,2797
+#define RS_PAR_EVEN RS_PAR_EVEN92,2835
+#define RS_PAR_MARK RS_PAR_MARK93,2873
+#define RS_PAR_SPACE RS_PAR_SPACE94,2911
+#define RS_STATUS_PE RS_STATUS_PE97,3026
+#define RS_STATUS_FE	RS_STATUS_FE98,3083
+#define RS_STATUS_OVERRUN	RS_STATUS_OVERRUN99,3131
+#define RS_STATUS_RDRF	RS_STATUS_RDRF100,3183
+#define RS_STOP_1 RS_STOP_1105,3304
+#define RS_STOP_2 RS_STOP_2106,3342
+#define RS_ERR_OK RS_ERR_OK109,3425
+#define RS_ERR_NOT_INITIALIZED RS_ERR_NOT_INITIALIZED110,3489
+#define RS_ERR_BAUD_TOO_FAST	RS_ERR_BAUD_TOO_FAST111,3559
+#define RS_ERR_BAUD_NOT_AVAIL	RS_ERR_BAUD_NOT_AVAIL112,3627
+#define RS_ERR_NO_DATA	RS_ERR_NO_DATA113,3696
+#define RS_ERR_OVERFLOW RS_ERR_OVERFLOW114,3753
+#define RS_ERR_INIT_FAILED RS_ERR_INIT_FAILED115,3829
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/serial.h,2808
+#define _SERIAL_H_SERIAL_H37,2581
+#define SER_BAUD_45_5 SER_BAUD_45_548,2818
+#define SER_BAUD_50 SER_BAUD_5049,2855
+#define SER_BAUD_75 SER_BAUD_7550,2892
+#define SER_BAUD_110 SER_BAUD_11051,2929
+#define SER_BAUD_134_5 SER_BAUD_134_552,2966
+#define SER_BAUD_150 SER_BAUD_15053,3003
+#define SER_BAUD_300 SER_BAUD_30054,3040
+#define SER_BAUD_600 SER_BAUD_60055,3077
+#define SER_BAUD_1200 SER_BAUD_120056,3114
+#define SER_BAUD_1800 SER_BAUD_180057,3151
+#define SER_BAUD_2400 SER_BAUD_240058,3188
+#define SER_BAUD_3600 SER_BAUD_360059,3225
+#define SER_BAUD_4800 SER_BAUD_480060,3262
+#define SER_BAUD_7200 SER_BAUD_720061,3299
+#define SER_BAUD_9600 SER_BAUD_960062,3336
+#define SER_BAUD_19200 SER_BAUD_1920063,3373
+#define SER_BAUD_38400 SER_BAUD_3840064,3410
+#define SER_BAUD_57600 SER_BAUD_5760065,3447
+#define SER_BAUD_115200 SER_BAUD_11520066,3484
+#define SER_BAUD_230400 SER_BAUD_23040067,3521
+#define SER_BAUD_31250 SER_BAUD_3125068,3558
+#define SER_BAUD_62500 SER_BAUD_6250069,3594
+#define SER_BITS_5 SER_BITS_572,3655
+#define SER_BITS_6 SER_BITS_673,3692
+#define SER_BITS_7 SER_BITS_774,3729
+#define SER_BITS_8 SER_BITS_875,3766
+#define SER_STOP_1 SER_STOP_178,3828
+#define SER_STOP_2 SER_STOP_279,3887
+#define SER_PAR_NONE SER_PAR_NONE82,3970
+#define SER_PAR_ODD SER_PAR_ODD83,4007
+#define SER_PAR_EVEN SER_PAR_EVEN84,4044
+#define SER_PAR_MARK SER_PAR_MARK85,4081
+#define SER_PAR_SPACE SER_PAR_SPACE86,4118
+#define SER_HS_NONE SER_HS_NONE89,4214
+#define SER_HS_HW SER_HS_HW90,4273
+#define SER_HS_SW SER_HS_SW91,4348
+#define SER_STATUS_PE SER_STATUS_PE96,4564
+#define SER_STATUS_FE SER_STATUS_FE97,4620
+#define SER_STATUS_OE SER_STATUS_OE98,4677
+#define SER_STATUS_DCD SER_STATUS_DCD99,4734
+#define SER_STATUS_DSR SER_STATUS_DSR100,4801
+#define SER_ERR_OK SER_ERR_OK103,4908
+#define SER_ERR_NO_DRIVER SER_ERR_NO_DRIVER104,4972
+#define SER_ERR_CANNOT_LOAD SER_ERR_CANNOT_LOAD105,5038
+#define SER_ERR_INV_DRIVER SER_ERR_INV_DRIVER106,5105
+#define SER_ERR_NO_DEVICE SER_ERR_NO_DEVICE107,5166
+#define SER_ERR_BAUD_UNAVAIL SER_ERR_BAUD_UNAVAIL108,5240
+#define SER_ERR_NO_DATA	SER_ERR_NO_DATA109,5310
+#define SER_ERR_OVERFLOW SER_ERR_OVERFLOW110,5372
+#define SER_ERR_INIT_FAILED SER_ERR_INIT_FAILED111,5441
+#define SER_ERR_INV_IOCTL SER_ERR_INV_IOCTL112,5509
+struct ser_params {ser_params115,5631
+    unsigned char       baudrate;       /* Baudrate */baudrate116,5651
+    unsigned char       databits;       /* Number of data bits */databits117,5706
+    unsigned char       stopbits;       /* Number of stop bits */stopbits118,5772
+    unsigned char       parity;         /* Parity setting */parity119,5838
+    unsigned char       handshake;      /* Type of handshake to use */handshake120,5899
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/setjmp.h,109
+#define _SETJMP_H_SETJMP_H37,2482
+typedef char jmp_buf [5];jmp_buf41,2503
+#define setjmp	setjmp46,2572
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/signal.h,448
+#define _SIGNAL_H_SIGNAL_H37,2581
+typedef unsigned char sig_atomic_t;sig_atomic_t42,2621
+typedef void __fastcall__ (*__sigfunc) (int);__sigfunc45,2689
+#define SIG_DFL SIG_DFL52,2897
+#define SIG_IGN SIG_IGN53,2930
+#define SIG_ERR SIG_ERR54,2963
+#define SIGABRT SIGABRT57,3030
+#define SIGFPE SIGFPE58,3056
+#define SIGILL SIGILL59,3082
+#define SIGINT SIGINT60,3108
+#define SIGSEGV SIGSEGV61,3134
+#define SIGTERM SIGTERM62,3160
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stdarg.h,214
+#define _STDARG_H_STDARG_H37,2490
+typedef unsigned char* va_list;va_list41,2511
+#define va_start(va_start43,2544
+#define va_arg(va_arg44,2599
+#define va_copy(va_copy46,2713
+#define va_end(va_end48,2762
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stdbool.h,241
+#define _STDBOOL_H_STDBOOL_H33,1798
+#define bool bool37,1820
+typedef unsigned char _Bool;_Bool38,1839
+#define false false41,1898
+#define true true42,1914
+#define __bool_true_false_are_defined __bool_true_false_are_defined45,1966
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stddef.h,351
+#define _STDDEF_H_STDDEF_H37,2500
+#define _HAVE_ptrdiff_t_HAVE_ptrdiff_t43,2571
+typedef int ptrdiff_t;ptrdiff_t44,2595
+#define _HAVE_wchar_t_HAVE_wchar_t47,2647
+#define _HAVE_size_t_HAVE_size_t51,2719
+typedef unsigned size_t;size_t52,2740
+#define NULL	NULL57,2811
+#define _HAVE_NULL_HAVE_NULL58,2826
+#define offsetof(offsetof62,2874
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stdint.h,3293
+#define _STDINT_H_STDINT_H43,2736
+typedef signed char         int8_t;int8_t48,2789
+typedef int                 int16_t;int16_t49,2825
+typedef long                int32_t;int32_t50,2862
+typedef unsigned char       uint8_t;uint8_t51,2899
+typedef unsigned            uint16_t;uint16_t52,2936
+typedef unsigned long       uint32_t;uint32_t53,2974
+#define INT8_MIN INT8_MIN55,3013
+#define INT8_MAX INT8_MAX56,3057
+#define INT16_MIN INT16_MIN57,3101
+#define INT16_MAX INT16_MAX58,3148
+#define INT32_MIN INT32_MIN59,3195
+#define INT32_MAX INT32_MAX60,3246
+#define UINT8_MAX UINT8_MAX61,3297
+#define UINT16_MAX UINT16_MAX62,3342
+#define UINT32_MAX UINT32_MAX63,3390
+typedef signed char         int_least8_t;int_least8_t66,3477
+typedef int                 int_least16_t;int_least16_t67,3519
+typedef long                int_least32_t;int_least32_t68,3562
+typedef unsigned char       uint_least8_t;uint_least8_t69,3605
+typedef unsigned            uint_least16_t;uint_least16_t70,3648
+typedef unsigned long       uint_least32_t;uint_least32_t71,3692
+#define INT_LEAST8_MIN INT_LEAST8_MIN73,3737
+#define INT_LEAST8_MAX INT_LEAST8_MAX74,3787
+#define INT_LEAST16_MIN INT_LEAST16_MIN75,3837
+#define INT_LEAST16_MAX INT_LEAST16_MAX76,3890
+#define INT_LEAST32_MIN INT_LEAST32_MIN77,3943
+#define INT_LEAST32_MAX INT_LEAST32_MAX78,4000
+#define UINT_LEAST8_MAX UINT_LEAST8_MAX79,4057
+#define UINT_LEAST16_MAX UINT_LEAST16_MAX80,4108
+#define UINT_LEAST32_MAX UINT_LEAST32_MAX81,4162
+typedef signed char         int_fast8_t;int_fast8_t84,4263
+typedef int                 int_fast16_t;int_fast16_t85,4304
+typedef long                int_fast32_t;int_fast32_t86,4346
+typedef unsigned char       uint_fast8_t;uint_fast8_t87,4388
+typedef unsigned            uint_fast16_t;uint_fast16_t88,4430
+typedef unsigned long       uint_fast32_t;uint_fast32_t89,4473
+#define INT_FAST8_MIN INT_FAST8_MIN91,4517
+#define INT_FAST8_MAX INT_FAST8_MAX92,4566
+#define INT_FAST16_MIN INT_FAST16_MIN93,4615
+#define INT_FAST16_MAX INT_FAST16_MAX94,4667
+#define INT_FAST32_MIN INT_FAST32_MIN95,4719
+#define INT_FAST32_MAX INT_FAST32_MAX96,4775
+#define UINT_FAST8_MAX UINT_FAST8_MAX97,4831
+#define UINT_FAST16_MAX UINT_FAST16_MAX98,4881
+#define UINT_FAST32_MAX UINT_FAST32_MAX99,4934
+typedef int                 intptr_t;intptr_t102,5047
+typedef unsigned            uintptr_t;uintptr_t103,5085
+#define INTPTR_MIN INTPTR_MIN105,5125
+#define INTPTR_MAX INTPTR_MAX106,5172
+#define UINTPTR_MAX UINTPTR_MAX107,5219
+typedef long                intmax_t;intmax_t110,5304
+typedef unsigned long       uintmax_t;uintmax_t111,5342
+#define INTMAX_MIN INTMAX_MIN113,5382
+#define INTMAX_MAX INTMAX_MAX114,5434
+#define UINTMAX_MAX UINTMAX_MAX115,5486
+#define PTRDIFF_MIN PTRDIFF_MIN118,5576
+#define PTRDIFF_MAX PTRDIFF_MAX119,5619
+#define SIG_ATOMIC_MIN SIG_ATOMIC_MIN121,5663
+#define SIG_ATOMIC_MAX SIG_ATOMIC_MAX122,5714
+#define SIZE_MAX SIZE_MAX124,5766
+#define INT8_C(INT8_C127,5851
+#define INT16_C(INT16_C128,5881
+#define INT32_C(INT32_C129,5911
+#define UINT8_C(UINT8_C130,5944
+#define UINT16_C(UINT16_C131,5977
+#define UINT32_C(UINT32_C132,6010
+#define INTMAX_C(INTMAX_C135,6095
+#define UINTMAX_C(UINTMAX_C136,6128
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stdio.h,714
+#define _STDIO_H_STDIO_H37,2480
+typedef struct _FILE FILE;FILE51,2609
+typedef unsigned long fpos_t;fpos_t52,2636
+#define _IOFBF	_IOFBF60,2785
+#define _IOLBF	_IOLBF61,2803
+#define _IONBF	_IONBF62,2821
+#define BUFSIZ	BUFSIZ63,2839
+#define EOF EOF64,2859
+#define FOPEN_MAX	FOPEN_MAX65,2882
+#define SEEK_CUR	SEEK_CUR66,2902
+#define SEEK_END	SEEK_END67,2921
+#define SEEK_SET	SEEK_SET68,2940
+#define TMP_MAX	TMP_MAX69,2959
+#  define FILENAME_MAX	FILENAME_MAX73,3082
+#  define FILENAME_MAX	FILENAME_MAX75,3137
+#  define FILENAME_MAX FILENAME_MAX77,3192
+#  define FILENAME_MAX FILENAME_MAX79,3229
+#define L_tmpnam	L_tmpnam81,3267
+#define getc(getc141,5828
+#define putc(putc142,5879
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/stdlib.h,393
+#define _STDLIB_H_STDLIB_H37,2490
+typedef unsigned size_t;size_t43,2555
+#define _HAVE_size_t_HAVE_size_t44,2580
+#define EXIT_SUCCESS	EXIT_SUCCESS48,2635
+#define EXIT_FAILURE	EXIT_FAILURE49,2658
+    int rem;rem53,2737
+    int quot;quot54,2750
+} div_t;div_t55,2764
+    long rem;rem59,2862
+    long quot;quot60,2876
+} ldiv_t;ldiv_t61,2891
+#define	RAND_MAX RAND_MAX97,4164
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/string.h,36
+#define _STRING_H_STRING_H37,2486
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/supervision.h,1372
+#define _SUPERVISION_H_SUPERVISION_H34,2065
+struct __sv_lcd {__sv_lcd51,2430
+    unsigned char       width;width52,2448
+    unsigned char       height;height53,2479
+    unsigned char       xpos;xpos54,2511
+    unsigned char       ypos;ypos55,2541
+#define SV_LCD SV_LCD57,2574
+struct __sv_tone {__sv_tone59,2618
+    unsigned            delay;delay60,2637
+    unsigned char       control;control61,2668
+    unsigned char       timer;timer62,2701
+#define SV_RIGHT SV_RIGHT64,2735
+#define SV_LEFT SV_LEFT65,2780
+struct __sv_noise {__sv_noise67,2826
+    unsigned char       volume;         /* and frequency */volume68,2846
+    unsigned char       timer;timer69,2906
+    unsigned char       control;control70,2937
+#define SV_NOISE SV_NOISE72,2973
+struct __io_port {__io_port74,3020
+    unsigned char       in;in75,3039
+    unsigned char       out;out76,3067
+#define IO_PORT IO_PORT78,3099
+struct __sv_dma {__sv_dma80,3146
+    unsigned            start;start81,3164
+    unsigned char       size;size82,3195
+    unsigned char       control;control83,3225
+    unsigned char       on;on84,3258
+#define SV_DMA SV_DMA86,3289
+#define SV_CONTROL SV_CONTROL88,3334
+#define SV_BANK SV_BANK90,3380
+#define SV_BANK_COMBINE(SV_BANK_COMBINE91,3423
+#define SV_VIDEO SV_VIDEO95,3606
+#define SV_TIMER_COUNT SV_TIMER_COUNT96,3648
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/sys/types.h,112
+#define _TYPES_H_TYPES_H37,2580
+#define _HAVE_off_t_HAVE_off_t49,2862
+typedef long int off_t;off_t50,2882
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/sys/utsname.h,260
+#define _UTSNAME_H_UTSNAME_H37,2582
+struct utsname {utsname72,3543
+    char sysname[17];sysname73,3560
+    char nodename[9];nodename74,3582
+    char release[9];release75,3604
+    char version[9];version76,3625
+    char machine[25];machine77,3646
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/tgi/tgi-error.h,397
+#define _TGI_ERROR_H_TGI_ERROR_H37,2584
+#define TGI_ERR_OK TGI_ERR_OK47,2825
+#define TGI_ERR_NO_DRIVER TGI_ERR_NO_DRIVER48,2880
+#define TGI_ERR_CANNOT_LOAD TGI_ERR_CANNOT_LOAD49,2946
+#define TGI_ERR_INV_DRIVER TGI_ERR_INV_DRIVER50,3013
+#define TGI_ERR_INV_MODE TGI_ERR_INV_MODE51,3074
+#define TGI_ERR_INV_ARG TGI_ERR_INV_ARG52,3149
+#define TGI_ERR_INV_FUNC	TGI_ERR_INV_FUNC53,3221
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/tgi/tgi-kernel.h,44
+#define _TGI_KERNEL_H_TGI_KERNEL_H37,2585
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/tgi/tgi-mode.h,368
+#define _TGI_MODE_H_TGI_MODE_H37,2583
+#define TGI_MODE_320_200_2 TGI_MODE_320_200_248,2886
+#define TGI_MODE_160_200_4 TGI_MODE_160_200_449,2956
+#define TGI_MODE_640_200_2	TGI_MODE_640_200_250,3020
+#define TGI_MODE_640_480_2	TGI_MODE_640_480_251,3080
+#define TGI_MODE_280_192_8 TGI_MODE_280_192_852,3140
+#define TGI_MODE_40_48_16 TGI_MODE_40_48_1653,3204
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/tgi.h,140
+#define _TGI_H_TGI_H37,2578
+#define TGI_TEXT_HORIZONTAL TGI_TEXT_HORIZONTAL57,2989
+#define TGI_TEXT_VERTICAL TGI_TEXT_VERTICAL58,3023
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/time.h,1585
+#define _TIME_H_TIME_H37,2479
+#define NULL	NULL43,2536
+#define _HAVE_NULL_HAVE_NULL44,2551
+#define _HAVE_size_t_HAVE_size_t49,2622
+typedef unsigned size_t;size_t50,2643
+typedef unsigned long time_t;time_t53,2676
+typedef unsigned long clock_t;clock_t54,2706
+struct tm {     tm57,2775
+    int	    tm_sec;tm_sec58,2792
+    int     tm_min;tm_min59,2812
+    int     tm_hour;tm_hour60,2832
+    int     tm_mday;tm_mday61,2853
+    int     tm_mon;tm_mon62,2874
+    int     tm_year;tm_year63,2894
+    int     tm_wday;tm_wday64,2915
+    int     tm_yday;tm_yday65,2936
+    int     tm_isdst;tm_isdst66,2957
+extern struct _timezone {_timezone70,3029
+    char    daylight;   /* True if daylight savings time active */daylight71,3055
+    long    timezone;   /* Number of seconds behind UTC */timezone72,3122
+    char    tzname[5];  /* Name of timezone, e.g. CET */tzname73,3181
+    char    dstname[5]; /* Name when daylight true, e.g. CEST */dstname74,3238
+#  define CLK_TCK	CLK_TCK82,3438
+#  define CLOCKS_PER_SEC	CLOCKS_PER_SEC83,3475
+#  define CLK_TCK CLK_TCK85,3543
+#  define CLOCKS_PER_SEC	CLOCKS_PER_SEC86,3591
+#    define CLK_TCK CLK_TCK90,3760
+#    define CLOCKS_PER_SEC	CLOCKS_PER_SEC91,3808
+#    define CLK_TCK	CLK_TCK93,3857
+#    define CLOCKS_PER_SEC	CLOCKS_PER_SEC94,3895
+#  define CLK_TCK CLK_TCK97,3973
+#  define CLOCKS_PER_SEC	CLOCKS_PER_SEC98,4019
+#  define CLK_TCK	CLK_TCK100,4083
+#  define CLOCKS_PER_SEC	CLOCKS_PER_SEC101,4116
+#  define CLK_TCK	CLK_TCK106,4291
+#  define CLOCKS_PER_SEC	CLOCKS_PER_SEC107,4321
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/unistd.h,329
+#define _UNISTD_H_UNISTD_H37,2581
+#define STDIN_FILENO	STDIN_FILENO48,2837
+#define STDOUT_FILENO	STDOUT_FILENO49,2860
+#define STDERR_FILENO	STDERR_FILENO50,2884
+#define _HAVE_size_t_HAVE_size_t54,2951
+typedef unsigned size_t;size_t55,2972
+#define _HAVE_off_t_HAVE_off_t60,3074
+typedef long int off_t;off_t61,3094
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/vic20.h,1060
+#define _VIC20_H_VIC20_H37,2512
+#define CH_F1	CH_F149,2686
+#define CH_F2	CH_F250,2706
+#define CH_F3	CH_F351,2726
+#define CH_F4	CH_F452,2746
+#define CH_F5	CH_F553,2766
+#define CH_F6	CH_F654,2786
+#define CH_F7	CH_F755,2806
+#define CH_F8	CH_F856,2826
+#define COLOR_BLACK COLOR_BLACK61,2869
+#define COLOR_WHITE COLOR_WHITE62,2904
+#define COLOR_RED COLOR_RED63,2939
+#define COLOR_CYAN COLOR_CYAN64,2974
+#define COLOR_VIOLET COLOR_VIOLET65,3004
+#define COLOR_GREEN COLOR_GREEN66,3039
+#define COLOR_BLUE COLOR_BLUE67,3074
+#define COLOR_YELLOW COLOR_YELLOW68,3109
+#define COLOR_ORANGE COLOR_ORANGE69,3144
+#define COLOR_BROWN COLOR_BROWN70,3179
+#define COLOR_LIGHTRED COLOR_LIGHTRED71,3214
+#define COLOR_GRAY1 COLOR_GRAY172,3249
+#define COLOR_GRAY2 COLOR_GRAY273,3284
+#define COLOR_LIGHTGREEN COLOR_LIGHTGREEN74,3319
+#define COLOR_LIGHTBLUE COLOR_LIGHTBLUE75,3354
+#define COLOR_GRAY3 COLOR_GRAY376,3389
+#define VIC VIC82,3467
+#define VIA1 VIA185,3528
+#define VIA2	VIA286,3570
+#define COLOR_RAM	COLOR_RAM91,3646
+
+../../../../opt/brew/Cellar/cc65/2.13.3/share/cc65/include/zlib.h,172
+#define _ZLIB_H_ZLIB_H39,2777
+#define Z_OK Z_OK41,2796
+#define Z_DATA_ERROR Z_DATA_ERROR42,2820
+#define Z_DEFLATED Z_DEFLATED45,2886
+#define Z_NULL Z_NULL48,2975
