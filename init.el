@@ -641,7 +641,9 @@
 (add-hook 'minibuffer-setup-hook (lambda () (setq truncate-lines t)))
 
 ;; indent c with four spaces
-(setq-default c-basic-offset 4 tab-width 4 indent-tabs-mode nil)
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
 
 ;; start the server if it isn't running
 (require 'server)
@@ -827,6 +829,7 @@
 (define-key-after-load "slime-repl"
   slime-repl-mode-map (kbd "M-<return>") 'slime-repl-closing-return)
 
+;; ielm
 (define-key-after-load "comint"
   comint-mode-map (kbd "<M-down>") 'comint-next-input)
 (define-key-after-load "comint"
