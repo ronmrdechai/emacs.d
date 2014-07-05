@@ -3,9 +3,9 @@
 ;; Copyright © 2013 Ron Mordechai
 ;;
 ;; Author: Ron Mordechai <ronmrdechai@gmail.com>
-;; URL:
+;; URL: https://github.com/ronmrdechai/emacs.d
 ;; Version: 1.0.0
-;; Keywords:
+;; Keywords: emacs.d
 
 ;; This file is not part of GNU Emacs.
 
