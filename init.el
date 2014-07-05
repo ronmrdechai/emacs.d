@@ -221,7 +221,7 @@
 ;; GENERAL OPTIONS
 
 ;; add .emacs.d/site-lisp to load-path
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/external")
 
 ;; -----------------------------------------------------------------------------
 ;; RECTANGULAR MARK OPTIONS
@@ -328,7 +328,7 @@
 ;; SLIME OPTIONS
 
 ;; slime
-(add-to-list 'load-path "~/.emacs.d/vendor/slime")
+(add-to-list 'load-path "~/.emacs.d/lisp/packages/slime")
 (require 'slime-autoloads)
 (setq inferior-lisp-program "/usr/local/bin/ccl")
 (setq slime-contribs '(slime-fancy))
@@ -501,14 +501,16 @@
 (global-auto-complete-mode t)
 
 ;; irony-mode for c
-(if (file-executable-p ".emacs.d/vendor/irony-mode/bin/irony-server")
+(if (file-executable-p ".emacs.d/lisp/packages/irony-mode/bin/irony-server")
     (add-hook 'c-mode-common-hook
               (lambda ()
-                (add-to-list 'load-path
-                             "/Users/Ron/.emacs.d/vendor/irony-mode/elisp")
+                (add-to-list 
+		 'load-path
+		 "/Users/Ron/.emacs.d/lisp/packages/irony-mode/elisp")
                 (require 'irony)
-                (setq irony-server-executable
-                      "/Users/Ron/.emacs.d/vendor/irony-mode/bin/irony-server")
+                (setq 
+		 irony-server-executable
+		 "/Users/Ron/.emacs.d/lisp/packages/irony-mode/bin/irony-server")
                 (irony-enable 'ac)
                 (irony-mode 1)))
   (message "irony-server is not compiled, please compile it."))
@@ -650,7 +652,7 @@
 (unless (and (daemonp) (server-running-p))
   (server-start))
 
-(add-to-list 'load-path "~/.emacs.d/me")
+(add-to-list 'load-path "~/.emacs.d/lisp/me")
 ;; TODO: autoload?
 (require 'functions-lib)
 (require 'functions)
@@ -835,4 +837,4 @@
 (define-key-after-load "comint"
   comint-mode-map (kbd "<M-up>")   'comint-previous-input)
 
-;;; init.el ends here
+;;; init.el ends 
