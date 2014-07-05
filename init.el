@@ -121,7 +121,6 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
-;; TODO: fix issue with opening frames through emacsclient
 (defun on-frame-open (frame)
   "A list of actions to perform before opening FRAME."
   (if (display-graphic-p frame)
@@ -140,10 +139,6 @@
 
 ;; -----------------------------------------------------------------------------
 ;; MODELINE OPTIONS
-
-;; make the modeline flat
-(set-face-attribute 'mode-line nil :box nil)
-(set-face-attribute 'mode-line-inactive nil :background "#141414" :box nil)
 
 (defun mode-line-fill (&optional reserve)
   "Return empty space leaving RESERVE space on the right."
@@ -838,4 +833,4 @@
 (define-key-after-load "comint"
   comint-mode-map (kbd "<M-up>")   'comint-previous-input)
 
-;;; init.el ends
+;;; init.el ends here
