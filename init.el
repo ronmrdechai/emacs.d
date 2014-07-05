@@ -133,7 +133,7 @@
         (scroll-bar-mode 0)
         (set-frame-font "Monaco-10" nil (list frame))
         (set-frame-size frame 80 50)
-        (set-frame-parameter frame 'alpha 92))
+        (set-frame-parameter frame 'alpha 95))
     (menu-bar-mode 0)))
 (on-frame-open (selected-frame))
 (add-hook 'after-make-frame-functions 'on-frame-open)
