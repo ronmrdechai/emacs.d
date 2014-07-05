@@ -79,6 +79,7 @@
       kept-new-versions 2
       kept-old-versions 5
       delete-old-versions t
+      trash-directory ".Trash" ;; TODO: make this only happen on OS X
       delete-by-moving-to-trash t)
 
 ;; enable case insensitive file completion
@@ -504,11 +505,11 @@
 (if (file-executable-p ".emacs.d/lisp/packages/irony-mode/bin/irony-server")
     (add-hook 'c-mode-common-hook
               (lambda ()
-                (add-to-list 
+                (add-to-list
 		 'load-path
 		 "/Users/Ron/.emacs.d/lisp/packages/irony-mode/elisp")
                 (require 'irony)
-                (setq 
+                (setq
 		 irony-server-executable
 		 "/Users/Ron/.emacs.d/lisp/packages/irony-mode/bin/irony-server")
                 (irony-enable 'ac)
@@ -837,4 +838,4 @@
 (define-key-after-load "comint"
   comint-mode-map (kbd "<M-up>")   'comint-previous-input)
 
-;;; init.el ends 
+;;; init.el ends
