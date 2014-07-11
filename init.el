@@ -113,6 +113,12 @@
 (put 'narrow-to-page   'disabled nil)
 (put 'narrow-to-defun  'disabled nil)
 
+;; add .emacs.d/lisp/external to load-path
+(add-to-list 'load-path "~/.emacs.d/lisp/external")
+
+;; -----------------------------------------------------------------------------
+;; GRAPHICAL OPTIONS
+
 ;; set Monokai as the theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'monokai t)
@@ -212,12 +218,6 @@
   (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p))))
-
-;; -----------------------------------------------------------------------------
-;; GENERAL OPTIONS
-
-;; add .emacs.d/site-lisp to load-path
-(add-to-list 'load-path "~/.emacs.d/lisp/external")
 
 ;; -----------------------------------------------------------------------------
 ;; RECTANGULAR MARK OPTIONS
