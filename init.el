@@ -144,41 +144,6 @@
 (add-hook 'after-make-frame-functions 'on-frame-open)
 
 ;; -----------------------------------------------------------------------------
-;; MODELINE OPTIONS
-
-(defun mode-line-fill (&optional reserve)
-  "Return empty space leaving RESERVE space on the right."
-  (let ((reserve (or reserve 20)))
-  (when (and window-system (eq 'right (get-scroll-bar-mode)))
-    (setq reserve (- reserve 3)))
-  (propertize " "
-              'display `((space :align-to (- (+ right right-fringe right-margin)
-                                             ,reserve))))))
-
-(defun vc-branch-name (&optional max-len)
-  "Get branch of current file, truncate to MAX-LEN if needed."
-  (let ((name (vc-working-revision (buffer-file-name)))
-        (max-len (or max-len 15)))
-    (if (> (length name) max-len)
-        (concat (substring name 0 (- max-len 3)) "...") name)))
-
-;; Set the modeline to something nice
-(setq-default
- mode-line-format
- (list mode-line-frame-identification
-       mode-line-buffer-identification " "
-       mode-line-position '(:eval mode-name) "   "
-       '(:eval
-         (propertize (if (and overwrite-mode (buffer-modified-p))
-                         "*modif-ovwrt*"
-                       (if (buffer-modified-p) "*modified*"
-                         (if overwrite-mode "*overwrite*" "")))
-                     'face 'font-lock-builtin-face
-                     'help-echo "Buffer has been modified"))
-       (mode-line-fill 12)
-       '(:eval (vc-branch-name 12)) ))
-
-;; -----------------------------------------------------------------------------
 ;; PACKAGE.EL OPTIONS
 
 (require 'package)
@@ -218,6 +183,13 @@
   (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p))))
+
+;; -----------------------------------------------------------------------------
+;; MODELINE OPTIONS
+
+;; Use powerline instead of the old modeline
+(setq powerline-default-separator nil)
+(powerline-default-theme)
 
 ;; -----------------------------------------------------------------------------
 ;; RECTANGULAR MARK OPTIONS
@@ -544,14 +516,15 @@
 (defun diminish-after-load (file mode)
   "After loading FILE, execute `diminish' on MODE."
   (eval-after-load file `(diminish ',mode)))
-;; (mapc
-;;  (lambda (x)
-;;    (diminish-after-load (car x) (cdr x)))
-;;  '(("eldoc"       . eldoc-mode)       ("rainbow-mode"  . rainbow-mode)
-;;    ("hideshow"    . hs-minor-mode)    ("flyspell"      . flyspell-mode)
-;;    ("undo-tree"   . undo-tree-mode)   ("whitespace"    . whitespace-mode)
-;;    ("smartparens" . smartparens-mode) ("auto-complete" . auto-complete-mode)
-;; ("abbrev" . abbrev-mode) ("volatile-highlights" . volatile-highlights-mode)))
+(mapc
+ (lambda (x)
+   (diminish-after-load (car x) (cdr x)))
+ '(("eldoc"       . eldoc-mode)       ("rainbow-mode"  . rainbow-mode)
+   ("abbrev"      . abbrev-mode)      ("flycheck"      . flycheck-mode)
+   ("hideshow"    . hs-minor-mode)    ("flyspell"      . flyspell-mode)
+   ("undo-tree"   . undo-tree-mode)   ("whitespace"    . whitespace-mode)
+   ("smartparens" . smartparens-mode) ("auto-complete" . auto-complete-mode)
+   ("volatile-highlights" . volatile-highlights-mode)))
 
 ;; disaster
 (autoload 'disaster "disaster" nil t)
