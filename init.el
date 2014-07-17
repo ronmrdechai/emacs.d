@@ -699,6 +699,8 @@
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 ;; map functions
+(global-unset-key (kbd "M-i"))
+
 (global-set-key (kbd "C-d")           'duplicate-current-line-or-region)
 (global-set-key (kbd "C-o")           'open-line-below)
 (global-set-key (kbd "C-S-o")         'open-line-above)
@@ -738,6 +740,11 @@
 (global-set-key (kbd "M-<up>")        'move-region-or-line-up)
 (global-set-key (kbd "M-<down>")      'move-region-or-line-down)
 (global-set-key (kbd "M-<kp-delete>") 'alt-delete-dwim)
+(global-set-key (kbd "M-i w")         'delete-in-word)
+(global-set-key (kbd "M-i '")         'delete-in-quotes)
+(global-set-key (kbd "M-i \"")        'delete-in-double-quotes)
+(global-set-key (kbd "M-i (")         'delete-in-parentheses)
+(global-set-key (kbd "M-i {")         'delete-in-braces)
 (global-set-key (kbd "s-e")           'er/expand-region)
 (global-set-key (kbd "s-r")           'repeat)
 (global-set-key (kbd "C-M-\\")        'indent-region-or-buffer)

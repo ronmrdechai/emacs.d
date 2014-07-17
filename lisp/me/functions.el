@@ -536,6 +536,48 @@ Bind this to <next>:
     (insert char)
     (backward-char 1)))
 
+(defun delete-in-word ()
+  "Delete word at point."
+  (interactive)
+  (backward-word 1)
+  (kill-word 1))
+
+(defun delete-in-quotes ()
+  "Delete quoted text at point."
+  (interactive)
+  (let ((start (re-search-backward "'")))
+    (forward-char 1)
+    (kill-region start (re-search-forward "'"))
+    (insert "''")
+    (backward-char 1)))
+
+(defun delete-in-double-quotes ()
+  "Delete double-quoted text at point."
+  (interactive)
+  (let ((start (re-search-backward "\"")))
+    (forward-char 1)
+    (kill-region start (re-search-forward "\""))
+    (insert "\"\"")
+    (backward-char 1)))
+
+(defun delete-in-parentheses ()
+  "Delete text in parentheses at point."
+  (interactive)
+  (let ((start (re-search-backward "(")))
+    (forward-char 1)
+    (kill-region start (re-search-forward ")"))
+    (insert "()")
+    (backward-char 1)))
+
+(defun delete-in-braces ()
+  "Delete text in braces at point."
+  (interactive)
+  (let ((start (re-search-backward "{")))
+    (forward-char 1)
+    (kill-region start (re-search-forward "}"))
+    (insert "{}")
+    (backward-char 1)))
+
 ;; Frame maximization functions
 (defun max-frame-width ()
   "Set frame width to maximum."
