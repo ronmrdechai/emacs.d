@@ -616,6 +616,12 @@
               tab-width 4
               indent-tabs-mode nil)
 
+;; yascroll
+(require 'yascroll)
+(set 'yascroll:delay-to-hide nil)
+(global-yascroll-bar-mode 1)
+
+
 ;; start the server if it isn't running
 (require 'server)
 (unless (and (daemonp) (server-running-p))
