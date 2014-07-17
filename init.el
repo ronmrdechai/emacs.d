@@ -165,10 +165,10 @@
 
 ;; make sure packages are installed on startup
 (defvar my-packages
-  '(ac-slime   auto-complete  concurrent  ctable  dash
-    epc epl expand-region impatient-mode jedi js2-mode
-    multiple-cursors   pkg-info   popup   rainbow-mode
-    smartparens smex tern tern-auto-complete)
+  '(ac-slime    auto-complete  concurrent   ctable   dash
+    epc  epl  expand-region  impatient-mode jedi js2-mode
+    multiple-cursors     pkg-info     popup     powerline
+    rainbow-mode smartparens smex tern tern-auto-complete)
   "A list of packages to ensure are installed at launch.")
 
 (defun packages-installed-p ()
