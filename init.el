@@ -264,6 +264,10 @@
 (autoload 'llvm-mode "llvm-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ll$" . llvm-mode))
 
+;; forth-mode
+(autoload 'forth-mode "gforth" nil t)
+(add-to-list 'auto-mode-alist '("\\.fs$" . forth-mode))
+
 ;; markdown-mode
 (autoload 'gfm-mode "markdown-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
