@@ -51,6 +51,13 @@
     (forward-char (- start-point (point)))
     (symbol-at-point)))
 
+(defun get-ip-address (&optional dev)
+  "Get the IP address for device DEV (default eth/en0)."
+  (let ((dev (or dev
+                 (concat (if (string-equal system-type "darwin")
+                             "en" "eth") "0"))))
+    (format-network-address (car (network-interface-info dev)) t)))
+
 (defun font-lock-comment-annotations ()
   "Highlight a bunch of well known comment annotations.
 

@@ -672,6 +672,15 @@ Bind this to <next>:
   (insert (format ";; %s OPTIONS" (upcase name)))
   (newline))
 
+(defun insert-ip-address (num)
+  "Insert IP address of device NUM at point."
+  (interactive "P")
+  (let* ((num (or num 0))
+         (dev (concat (if (string-equal system-type "darwin")
+                          "en" "eth")
+                      (prin1-to-string num))))
+    (insert (get-ip-address dev))))
+
 (defadvice delete-indentation (before reverse-delete-indentation activate)
   "Reverse the way `delete-indentation' works."
   (ad-set-arg 0 (not (ad-get-arg 0))))
