@@ -192,6 +192,18 @@
 (powerline-default-theme)
 
 ;; -----------------------------------------------------------------------------
+;; ORG-MODE OPTIONS
+
+;; create an `org-mode' scratch buffer
+(let ((prev-buffer (current-buffer)))
+  (set-buffer (get-buffer-create "*org-scratch*"))
+  (org-mode)
+  (set-buffer prev-buffer))
+
+;; make shift selection work in `org-mode'
+(setq org-support-shift-select t)
+
+;; -----------------------------------------------------------------------------
 ;; RECTANGULAR MARK OPTIONS
 
 (defvar rm-mark-active nil)
