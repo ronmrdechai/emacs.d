@@ -741,7 +741,6 @@
 (global-set-key (kbd "C-c SPC")       'ace-jump-mode)
 (global-set-key (kbd "C-x f")         'recentf-ido-find-file)
 (global-set-key (kbd "C-x g")         'imenu-anywhere)
-(global-set-key (kbd "C-x p")         'toggle-window-dedicated)
 (global-set-key (kbd "C-x m")         'eshell)
 (global-set-key (kbd "C-x M")        (lambda () (interactive) (eshell t)))
 (global-set-key (kbd "C-x a f")       'find-file-at-point)
@@ -795,6 +794,7 @@
         ("3" . split-window-right)
         ("h" . toggle-frame-max-height)
         ("m" . toggle-frame-max)
+        ("p" . toggle-window-dedicated)
         ("t" . transparency)
         ("w" . toggle-frame-max-width)))
 
