@@ -597,8 +597,9 @@ Bind this to <next>:
   "Set frame height to maximum."
   (interactive)
   (if (not (frame-parameter (selected-frame) 'frame-at-max-height))
-      (let* ((osx-menu-bar-height 23)  ;; Height OS X's menu bar +1 pixel
-             (osx-title-bar-height 23) ;; Height OS X's title bar
+      (let* ((osx-menu-bar-height      ;; Height of OS X's menu bar +1 pixel
+              (if (string-equal system-type "darwin") 23 0))
+             (osx-title-bar-height 23) ;; Height of OS X's title bar
              (frame-pos-x (frame-parameter nil 'left))
              (max-rows (/ (- (display-pixel-height)
                              (+ osx-menu-bar-height
