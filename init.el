@@ -745,6 +745,8 @@
 (global-set-key (kbd "C-c w w")       'set-window-width)
 (global-set-key (kbd "C-c w h")       'set-window-height)
 (global-set-key (kbd "C-c SPC")       'ace-jump-mode)
+(global-set-key (kbd "C-x c")         'calc)
+(global-set-key (kbd "C-x p")         'proced)
 (global-set-key (kbd "C-x f")         'recentf-ido-find-file)
 (global-set-key (kbd "C-x g")         'imenu-anywhere)
 (global-set-key (kbd "C-x m")         'eshell)
