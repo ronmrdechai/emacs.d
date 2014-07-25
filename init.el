@@ -571,6 +571,12 @@
 (eval-after-load "tramp-cache"
   '(setq tramp-persistency-file-name "~/.emacs.d/cache/tramp"))
 
+;; diff-hl
+(add-hook 'prog-mode-hook   'turn-on-diff-hl-mode)
+(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+(eval-after-load "diff-hl"
+  '(setq diff-hl-draw-borders nil))
+
 ;; smartparens mode
 (require 'smartparens-config)
 (smartparens-global-mode 1)
