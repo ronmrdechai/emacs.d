@@ -165,7 +165,7 @@
 
 ;; make sure packages are installed on startup
 (defvar my-packages
-  '(ac-slime    auto-complete  concurrent   ctable   dash
+  '(ac-slime auto-complete concurrent ctable dash diff-hl
     epc  epl  expand-region  impatient-mode jedi js2-mode
     multiple-cursors     pkg-info     popup     powerline
     rainbow-mode smartparens smex tern tern-auto-complete)
