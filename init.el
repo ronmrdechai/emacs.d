@@ -815,6 +815,26 @@
 (global-set-key [remap list-buffers]           'ibuffer-list-buffers)
 (global-set-key [remap goto-line]              'goto-line-with-numbers)
 
+;; Enable vi-like single character motions with M-hjkl
+(defun global-exchange-keys (key-1 key-2)
+  "Swap KEY-1 and KEY-2's mappings.
+If KEY-1 is bound to func-1 and KEY-2 is bound to func-2, calling this function
+will cause KEY-1 to be bound to func-2 and KEY-2 to be bound to func1-.
+
+KEYs are a string or vector, a sequence of keystrokes."
+  (let ((func-1 (key-binding key-1))
+        (func-2 (key-binding key-2)))
+    (global-unset-key key-1)
+    (global-unset-key key-2)
+    (global-set-key key-1 func-2)
+    (global-set-key key-2 func-1)))
+
+;; Map M-hjkl to left, down, up, and right respectively
+(global-exchange-keys (kbd "M-h") (kbd "C-b"))
+(global-exchange-keys (kbd "M-j") (kbd "C-n"))
+(global-exchange-keys (kbd "M-k") (kbd "C-p"))
+(global-exchange-keys (kbd "M-l") (kbd "C-f"))
+
 ;; -----------------------------------------------------------------------------
 ;; MODE SPECIFIC KEY BINDINGS
 
