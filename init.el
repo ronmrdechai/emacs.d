@@ -835,6 +835,10 @@ KEYs are a string or vector, a sequence of keystrokes."
 (global-exchange-keys (kbd "M-k") (kbd "C-p"))
 (global-exchange-keys (kbd "M-l") (kbd "C-f"))
 
+;; Remap `forward-char'/`backward-char' to allow M-S-hjkl selection
+(global-set-key [remap backward-char] 'left-char)
+(global-set-key [remap forward-char]  'right-char)
+
 ;; -----------------------------------------------------------------------------
 ;; MODE SPECIFIC KEY BINDINGS
 
