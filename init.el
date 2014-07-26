@@ -79,7 +79,7 @@
       kept-new-versions 2
       kept-old-versions 5
       delete-old-versions t
-      trash-directory ".Trash" ;; TODO: make this only happen on OS X
+      trash-directory "~/.Trash" ;; TODO: make this only happen on OS X
       delete-by-moving-to-trash t)
 
 ;; enable case insensitive file completion
