@@ -593,6 +593,10 @@
       uniquify-after-kill-buffer-p t
       uniquify-ignore-buffers-re "^\\*")
 
+;; neotree
+(autoload 'neotree-toggle "neotree" "Toggle showing of the NeoTree window." t)
+(global-set-key [f8] 'neotree-toggle)
+
 ;; extra dired commands
 (require 'dired-x)
 
