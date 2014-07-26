@@ -139,7 +139,7 @@ Takes and optional `FRAME' as reference."
 
          ;; Adaptive colors
          (monokai-fg       (if (in-terminal) "#F5F5F5" "#F8F8F2"))
-         (monokai-bg       (if (in-terminal) nil       "#272822"))
+         (monokai-bg       (if (in-terminal) "#1B1E1C" "#272822"))
          (monokai-hl-line  (if (in-terminal) "#212121" "#3E3D31"))
          (monokai-hl       (if (in-terminal) "#303030" "#49483E"))
          (monokai-emph     (if (in-terminal) "#FFFAFA" "#F8F8F0"))
@@ -181,7 +181,7 @@ Takes and optional `FRAME' as reference."
          (s-mode-line-inactive-fg (if monokai-high-contrast-mode-line
                                       monokai-fg monokai-comments))
          (s-mode-line-inactive-bg (if monokai-high-contrast-mode-line
-                                      monokai-hl-line "#141414"))
+                                      monokai-hl-line monokai-bg))
          (s-mode-line-inactive-bc (if monokai-high-contrast-mode-line
                                       monokai-fg monokai-hl-line)))
     (custom-theme-set-faces
@@ -505,7 +505,9 @@ Takes and optional `FRAME' as reference."
                                 :underline unspecified
                                 :foreground ,s-mode-line-fg
                                 :background ,s-mode-line-bg
-                                :box nil))))
+                                :box (:line-width 1
+                                                  :color ,s-mode-line-bg
+                                                  :style unspecified)))))
 
      `(mode-line-buffer-id
        ((,class (:foreground ,s-mode-line-buffer-id-fg
@@ -516,7 +518,9 @@ Takes and optional `FRAME' as reference."
                                 :underline unspecified
                                 :foreground ,s-mode-line-inactive-fg
                                 :background ,s-mode-line-inactive-bg
-                                :box nil))))
+                                :box (:line-width 1
+                                                  :color ,s-mode-line-inactive-bc
+                                                  :style unspecified)))))
 
      `(header-line
        ((,class (:inverse-video unspecified
@@ -1346,17 +1350,17 @@ Takes and optional `FRAME' as reference."
 
      `(flycheck-fringe-error
        ((,class (:foreground ,red-hc
-                             :foreground ,red-lc
+                             :background ,red-lc
                              :weight bold))))
 
      `(flycheck-fringe-warning
        ((,class (:foreground ,yellow-hc
-                             :foreground ,yellow-lc
+                             :background ,yellow-lc
                              :weight bold))))
 
      `(flycheck-fringe-info
        ((,class (:foreground ,blue-hc
-                             :foreground ,blue-lc
+                             :background ,blue-lc
                              :weight bold))))
 
      ;; flyspell
@@ -3680,5 +3684,11 @@ Takes and optional `FRAME' as reference."
 (add-hook 'server-visit-hook 'create-monokai-theme )
 
 (provide-theme 'monokai)
+
+;; Local Variables:
+;; no-byte-compile: t
+;; eval: (when (fboundp 'rainbow-mode) (rainbow-mode 1))
+;; fill-column: 95
+;; End:
 
 ;;; monokai-theme.el ends here
