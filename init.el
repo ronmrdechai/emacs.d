@@ -168,7 +168,8 @@
   '(ac-slime auto-complete concurrent ctable dash diff-hl
     epc  epl  expand-region  impatient-mode jedi js2-mode
     multiple-cursors     pkg-info     popup     powerline
-    rainbow-mode smartparens smex tern tern-auto-complete)
+    rainbow-mode smartparens smex tern tern-auto-complete
+    undo-tree)
   "A list of packages to ensure are installed at launch.")
 
 (defun packages-installed-p ()
