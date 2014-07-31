@@ -202,7 +202,8 @@
   (set-buffer prev-buffer))
 
 ;; make shift selection work in `org-mode'
-(setq org-support-shift-select t)
+(eval-after-load "org"
+  '(setq org-support-shift-select t))
 
 ;; -----------------------------------------------------------------------------
 ;; RECTANGULAR MARK OPTIONS
