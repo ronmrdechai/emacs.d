@@ -532,18 +532,6 @@
 ;; -----------------------------------------------------------------------------
 ;; GENERAL OPTIONS
 
-;; show matching braces
-(show-paren-mode 1)
-(setq show-paren-delay 0)
-
-;; indent new lines
-(electric-indent-mode 1)
-
-;; update files when changed on disk
-(global-auto-revert-mode)
-(setq global-auto-revert-non-file-buffers t
-      auto-revert-verbose nil)
-
 ;; clean up the modeline
 (autoload 'diminish "diminish")
 (defun diminish-after-load (file mode)
@@ -564,6 +552,18 @@
   :commands rainbow-turn-on
   :init
   (add-hook 'prog-mode-hook 'rainbow-turn-on))
+
+;; show matching braces
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
+;; indent new lines
+(electric-indent-mode 1)
+
+;; update files when changed on disk
+(global-auto-revert-mode)
+(setq global-auto-revert-non-file-buffers t
+      auto-revert-verbose nil)
 
 ;; disaster
 (autoload 'disaster "disaster" nil t)
