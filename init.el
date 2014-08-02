@@ -402,13 +402,9 @@
 ;; -----------------------------------------------------------------------------
 ;; ESHELL OPTIONS
 
-(defcustom eshell-directory-name
-  (locate-user-emacs-file "cache/eshell/")
-  "The directory where Eshell control files should be kept."
-  :type 'directory
-  :group 'eshell)
 (eval-after-load "esh-mode"
-  (setq eshell-path-env (mapconcat (lambda (x) x) exec-path ":")))
+  (setq eshell-path-env       (mapconcat (lambda (x) x) exec-path ":")
+        eshell-directory-name (locate-user-emacs-file "cache/eshell/")))
 
 ;; -----------------------------------------------------------------------------
 ;; PERL OPTIONS
