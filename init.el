@@ -121,12 +121,27 @@
        (when (executable-find "gls")
          (setq insert-directory-program "gls"))))
 
+;; show init time after init
+(defun show-init-time ()
+  "Show Emacs' init time in the minibuffer."
+  (message "Init time: %s" (emacs-init-time)))
+(add-hook 'emacs-startup-hook 'show-init-time)
+
 ;; -----------------------------------------------------------------------------
 ;; GRAPHICAL OPTIONS
 
 ;; set Monokai as the theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'monokai t)
+
+;; Set the font
+(cond
+ ((find-font (font-spec :name "Monaco"))
+  (set-frame-font "Monaco-10" t t))
+ ((find-font (font-spec :name "Monospace"))
+  (set-frame-font "Monospace-12" t t))
+ ((find-font (font-spec :name "courier"))
+  (set-frame-font "courier-12" t t)))
 
 ;; add /usr/local/bin to `exec-path' and PATH
 (add-to-list 'exec-path "/usr/local/bin")
