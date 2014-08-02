@@ -78,9 +78,7 @@
       version-control t
       kept-new-versions 2
       kept-old-versions 5
-      delete-old-versions t
-      trash-directory "~/.Trash" ;; TODO: make this only happen on OS X
-      delete-by-moving-to-trash t)
+      delete-old-versions t)
 
 ;; enable case insensitive file completion
 (setq completion-ignore-case t
@@ -115,6 +113,13 @@
 
 ;; add .emacs.d/lisp/external to load-path
 (add-to-list 'load-path "~/.emacs.d/lisp/external")
+
+;; OS X specific options
+(cond ((eq system-type 'darwin)
+       (setq delete-by-moving-to-trash t
+             trash-directory "~/.Trash/")
+       (when (executable-find "gls")
+         (setq insert-directory-program "gls"))))
 
 ;; -----------------------------------------------------------------------------
 ;; GRAPHICAL OPTIONS
