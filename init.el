@@ -577,10 +577,9 @@
   :bind ("C-x g" . imenu-anywhere))
 
 ;; ace-jump-mode
-(autoload 'ace-jump-mode "ace-jump-mode" "Emacs quick move minor mode" t)
-(autoload 'ace-jump-mode-pop-mark "ace-jump-mode" "Ace jump back" t)
-(eval-after-load "ace-jump-mode"
-  '(ace-jump-mode-enable-mark-sync))
+(use-package ace-jump-mode
+  :config (ace-jump-mode-enable-mark-sync)
+  :bind ("C-c SPC" . ace-jump-mode))
 
 ;; saveplace
 (require 'saveplace)
