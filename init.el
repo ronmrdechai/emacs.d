@@ -156,7 +156,6 @@
         (set-selection-coding-system 'compound-text-with-extensions)
         (tool-bar-mode 0)
         (scroll-bar-mode 0)
-        (set-frame-font "Monaco-10" nil (list frame))
         (set-frame-size frame 80 50)
         (set-frame-parameter frame 'alpha 95))
     (menu-bar-mode 0)))
