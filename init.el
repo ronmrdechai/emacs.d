@@ -188,7 +188,7 @@
     epc  epl  expand-region  impatient-mode jedi js2-mode
     multiple-cursors     pkg-info     popup     powerline
     rainbow-mode smartparens smex tern tern-auto-complete
-    undo-tree)
+    undo-tree use-package)
   "A list of packages to ensure are installed at launch.")
 
 (defun packages-installed-p ()
@@ -203,6 +203,9 @@
   (dolist (p my-packages)
     (when (not (package-installed-p p))
       (package-install p))))
+
+;; allow using of `use-package'
+(require 'use-package)
 
 ;; -----------------------------------------------------------------------------
 ;; MODELINE OPTIONS
