@@ -380,15 +380,15 @@
 ;; -----------------------------------------------------------------------------
 ;; FLYSPELL/CHECK OPTIONS
 
-;; flyspell
-(setq-default ispell-program-name "/usr/local/bin/aspell")
-(eval-after-load "flyspell"
-  '(progn
-     (setq ispell-personal-dictionary "~/.emacs.d/data/dict-custom")
-     ;; (fset 'ispell-get-word 'ispell-get-cC-word)
-     (fset 'flyspell-emacs-popup 'flyspell-emacs-popup-textual)))
-(when (executable-find ispell-program-name)
-  (add-hook 'prog-mode-hook 'flyspell-prog-mode))
+(use-package flyspell
+  :defer t
+  :idle ((lambda ()
+           "Deferred setup of flyspell-mode."
+           (add-hook 'text-mode-hook 'flyspell-mode)
+           (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+           (fset 'flyspell-emacs-popup 'flyspell-emacs-popup-textual)))
+  :init (setq ispell-program-name        "/usr/local/bin/aspell"
+              ispell-personal-dictionary "~/.emacs.d/data/dict-custom"))
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
