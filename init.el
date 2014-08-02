@@ -532,9 +532,6 @@
 ;; -----------------------------------------------------------------------------
 ;; GENERAL OPTIONS
 
-;; rainbow mode
-(add-hook 'prog-mode-hook 'rainbow-mode)
-
 ;; show matching braces
 (show-paren-mode 1)
 (setq show-paren-delay 0)
@@ -561,6 +558,12 @@
    ("undo-tree"   . undo-tree-mode)   ("whitespace"    . whitespace-mode)
    ("smartparens" . smartparens-mode) ("auto-complete" . auto-complete-mode)
    ("volatile-highlights" . volatile-highlights-mode)))
+
+;; rainbow mode
+(use-package rainbow-mode
+  :commands rainbow-turn-on
+  :init
+  (add-hook 'prog-mode-hook 'rainbow-turn-on))
 
 ;; disaster
 (autoload 'disaster "disaster" nil t)
