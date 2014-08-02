@@ -572,8 +572,9 @@
          "/usr/local/bin/gobjdump -d -M att -Sl --no-show-raw-insn"))
 
 ;; imenu-anywhere
-(autoload 'imenu-anywhere "imenu-anywhere"
-  "Switch to a buffer-local tag from Imenu via Ido." t)
+(use-package imenu-anywhere
+  :commands imenu-anywhere
+  :bind ("C-x g" . imenu-anywhere))
 
 ;; ace-jump-mode
 (autoload 'ace-jump-mode "ace-jump-mode" "Emacs quick move minor mode" t)
